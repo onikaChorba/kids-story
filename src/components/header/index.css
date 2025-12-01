@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: white;
+  height: 100px;
+  padding: 0px;
+}
+
+.logo {
+  width: 192px;
+}
+
+.custom-menu {
+  flex: 1;
+  min-width: 0;
+  background: white;
+}
+
+.custom-menu .ant-menu-item-selected {
+  color: #EA5D4A !important;
+  background-color: transparent !important;
+}
+
+.custom-menu .ant-menu-item:hover::after {
+  border-bottom-color: #EA5D4A !important;
+}
+
+.custom-menu .ant-menu-item-selected::after {
+  border-bottom-color: #EA5D4A !important;
+}
+
+.custom-button {
+  background: #8081BD;
+  border-radius: 50px;
+  width: 192px;
+  height: 40px;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.custom-button:hover {
+  background: #6a6ca0 !important;
+}
