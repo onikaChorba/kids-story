@@ -2,6 +2,7 @@ import { Layout, Menu, Button, Flex, Dropdown } from 'antd';
 import Icon, { PhoneFilled, DownOutlined } from '@ant-design/icons';
 import type { GetProps, MenuProps } from 'antd';
 import logo from '../../assets/img/logo.png';
+import { Link } from 'react-router-dom';
 import React from 'react';
 import './index.css'
 const { Header } = Layout;
@@ -32,13 +33,13 @@ const TelegramIcon: React.FC<Partial<CustomIconComponentProps>> = (props) => (
 export const HeaderCustom = () => {
 
   const dropdownItemsAbout: MenuProps['items'] = [
-    { key: 'center', label: 'About the Center' },
-    { key: 'documents', label: 'Documents' },
-    { key: 'parents', label: 'For Parents' },
-    { key: 'meals', label: 'Meals' },
-    { key: 'news', label: 'News' },
-    { key: 'tour3d', label: '3D Tour' },
-    { key: 'reviews', label: 'Reviews' },
+    { key: 'center', label: <Link to="/about-center">About the Center</Link> },
+    { key: 'documents', label: <Link to="/documents">Documents</Link> },
+    { key: 'parents', label: <Link to="/for-parents">For Parents</Link> },
+    { key: 'meals', label: <Link to="/meals">Meals</Link> },
+    { key: 'news', label: <Link to="/news">News</Link> },
+    { key: 'tour3d', label: <Link to="/3d-tour">3D Tour</Link> },
+    { key: 'reviews', label: <Link to="/reviews">Reviews</Link> },
   ];
 
   const dropdownItemsContacts: MenuProps['items'] = [
@@ -57,7 +58,7 @@ export const HeaderCustom = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsAbout }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
-            <a onClick={e => e.preventDefault()}>About us</a></Button>
+            <Link to="/about">About us</Link></Button>
         </Dropdown>
       ),
     },
@@ -66,7 +67,7 @@ export const HeaderCustom = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsContacts }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
-            <a onClick={e => e.preventDefault()}>Contacts</a>
+            <Link to="/contact">Contacts</Link>
           </Button>
         </Dropdown>
       ),
@@ -76,27 +77,15 @@ export const HeaderCustom = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsSchedule }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
-            <a onClick={e => e.preventDefault()}>Schedule</a>
+            <Link to="/schedule">Schedule</Link>
           </Button>
         </Dropdown>
       ),
     },
-    {
-      key: "syllabus",
-      label: "Syllabus",
-    },
-    {
-      key: "photo/video",
-      label: "Photo and Video",
-    },
-    {
-      key: "teams",
-      label: "Teams",
-    },
-    {
-      key: "contacts",
-      label: "Contacts",
-    },
+    { key: 'syllabus', label: <Link to="/syllabus">Syllabus</Link> },
+    { key: 'photo/video', label: <Link to="/photo-video">Photo and Video</Link> },
+    { key: 'teams', label: <Link to="/teams">Teams</Link> },
+    { key: 'contacts', label: <Link to="/contacts">Contacts</Link> },
   ];
 
   return (
