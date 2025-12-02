@@ -1,0 +1,21 @@
+.additionalServices h2{
+  margin-bottom: 30px;
+}
+
+.additionalServices .box-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  background: #FFF6D1;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.additionalServices .box-item .icon-wrapper{
+  width: 76px;
+  height: 76px;
+  background: white;
+  border-radius: 5px;
+}

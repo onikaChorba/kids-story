@@ -1,0 +1,24 @@
+.videoGallery {
+  background: url("../../assets/img/gallery.png") no-repeat center/cover;
+  margin-top: 30px;
+}
+
+.videoGallery h2 {
+  margin-bottom: 30px;
+}
+
+.videoGallery .title {
+  margin-top: 30px;
+}
+
+.videoGallery p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #334155;
+}
+
+.slider {
+  padding-top: 30px;
+}

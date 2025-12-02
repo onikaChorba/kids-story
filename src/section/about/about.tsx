@@ -19,7 +19,7 @@ export const About = () => {
   ];
 
   return (
-    <section>
+    <section className="about">
       <Row justify="center" gutter={[0, 20]}>
         {aboutData.map((item, index) => (
           <Col span={7} key={index}>

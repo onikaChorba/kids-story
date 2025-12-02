@@ -12,11 +12,12 @@
 }
 
 h1,
-h2{
+h2 {
   padding: 0px;
   margin: 0px;
-}
-
-section{
-  padding-top: 100px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #8081bd;
 }
