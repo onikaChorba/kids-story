@@ -91,7 +91,7 @@ export const HeaderCustom = () => {
   return (
     <Header
       className='header' >
-      <img className="logo" src={logo} />
+      <Link to="/"><img className="logo" src={logo} /></Link>
       <Menu
         theme="light"
         mode="horizontal"

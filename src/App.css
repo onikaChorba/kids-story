@@ -1,10 +1,14 @@
 #root {
-  max-width: 1280px;
+  max-width: 1420px;
   margin: 0 auto;
 }
 
 .primary-orange-color {
   color: #EA5D4A;
+}
+
+.primary-orange-bg{
+  background: #EA5D4A !important;
 }
 
 .primary-grey-color{
