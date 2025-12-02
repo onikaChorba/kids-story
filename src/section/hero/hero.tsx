@@ -3,7 +3,7 @@ import { Button, Flex, Form, Input, Radio } from 'antd'
 import heroImg from '../../assets/img/hero.png'
 export const Hero = () => {
   return (
-    <Flex align='center' justify='center' gap="small" wrap style={{ position: 'relative' }}>
+    <Flex align='center' justify='center' gap="small" wrap style={{ position: 'relative' }} className='hero'>
       <Flex vertical className='textblock' gap="small">
         <h1>Kidsstory</h1>
         <h2>English for children

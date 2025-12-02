@@ -11,6 +11,18 @@
   background: #EA5D4A !important;
 }
 
+.primary-orange-light-bg {
+  background: #F6B31F !important;
+}
+
+.primary-pink-light-bg {
+  background: #F3ACC8 !important;
+}
+
+.primary-violet-light-bg{
+    background: #8081BD !important;
+}
+
 .primary-grey-color{
   color: #334155;
 }

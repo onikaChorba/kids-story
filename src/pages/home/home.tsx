@@ -1,8 +1,13 @@
+import { About } from "../../section/about/about";
 import { Hero } from "../../section/hero/hero";
+import { Flex } from "antd";
+import { Question } from "../../section/question/question";
 
 export const Home = () => {
   return (
-    <div>
+    <Flex gap="large" vertical>
       <Hero />
-    </div>);
+      <About />
+      <Question />
+    </Flex>);
 }

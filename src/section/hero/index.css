@@ -21,14 +21,14 @@
   margin: 0px;
 }
 
-.form {
+.hero .form {
   max-width: 384px;
   background: #8081bd;
   padding: 27px 38px;
   border-radius: 16px;
 }
 
-.form h2 {
+.hero .form h2 {
   padding: 0px;
   margin: 0px;
   font-style: normal;
@@ -40,7 +40,7 @@
   color: #ffffff;
 }
 
-.form p {
+.hero .form p {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -48,13 +48,13 @@
   color: #ffffff;
 }
 
-.form .input {
+.hero .form .input {
   border-radius: 50px;
   position: relative;
 }
 
-.form .input::placeholder,
-.form .input input::placeholder {
+.hero .form .input::placeholder,
+.hero .form .input input::placeholder {
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -70,7 +70,7 @@
   transform: translateY(-50%);
 }
 
-.form .radio {
+.hero .form .radio {
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
@@ -79,18 +79,18 @@
   padding: 10px;
 }
 
-.form .radio.ant-radio-wrapper:hover .ant-radio-inner {
+.hero .form .radio.ant-radio-wrapper:hover .ant-radio-inner {
   border-color: #ea5d4a !important;
 }
 
-.form .radio .ant-radio-checked .ant-radio-inner {
+.hero .form .radio .ant-radio-checked .ant-radio-inner {
   border-color: #ea5d4a !important;
 }
-.form .radio .ant-radio-inner {
+.hero .form .radio .ant-radio-inner {
   border-width: 5px;
 }
 
-.form .button {
+.hero .form .button {
   width: 308px;
   height: 40px;
   border-radius: 50px;
@@ -100,6 +100,5 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-
   color: #ffffff;
 }
