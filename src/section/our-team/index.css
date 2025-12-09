@@ -27,7 +27,6 @@
   border-radius: 16;
   overflow: hidden;
   margin: 0 12px;
-  border: none;
 }
 
 .card-img {
@@ -78,14 +77,4 @@
 
 .arrow.prev {
   left: -20px;
-}
-
-.ant-card .ant-card-meta,
-.ant-card .ant-card-meta-detail,
-.ant-card .ant-card-meta-avatar,
-.ant-card .ant-card-meta-title,
-.ant-card .ant-card-meta-description {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
 }

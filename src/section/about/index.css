@@ -18,3 +18,43 @@
   line-height: 20px;
   color: #334155;
 }
+
+.about-center {
+  max-width: 900px;
+  padding: 0px 20px;
+  color: #334155;
+  font-family: 'Inter', sans-serif;
+}
+
+.about-center h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-center p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.about-center h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-center ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.about-center ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.primary-orange-color {
+  color: #ea5d4a;
+}
