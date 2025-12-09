@@ -51,30 +51,3 @@
   line-height: 17px;
   color: #334155;
 }
-
-.arrow {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #8081bd;
-  color: white;
-  font-size: 48px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.arrow.next {
-  right: -20px;
-}
-
-.arrow.prev {
-  left: -20px;
-}

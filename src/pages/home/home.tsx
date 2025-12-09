@@ -1,6 +1,7 @@
 import { Flex } from "antd";
 import { Hero } from "../../section/hero/hero";
 import { About } from "../../section/about/about";
+import { Reviews } from "../../section/review/review";
 import questionBg from '../../assets/img/question.png';
 import questionBg2 from '../../assets/img/question2.png';
 import { OurTeam } from "../../section/our-team/our-team";
@@ -9,9 +10,14 @@ import { AboutCenter } from "../../section/about/about-center";
 import { VideoGallery } from "../../section/video-gallery/video-gallery";
 import { AdditionalServices } from "../../section/additional-services/additional-services";
 
-
-
 export const Home = () => {
+
+  const reviewsData = [
+    { text: "We're taking two children here and are very pleased with the level and quality of education. If you're just looking for a preschool, this isn't the place for you. The children know English (pronunciation, grammar, etc.)", author: "Olga K.", role: "Parent", avatar: "https://i.pravatar.cc/150?img=1" },
+    { text: "Teachers are very friendly and professional.", author: "Ivan P.", role: "Parent" },
+    { text: "My child loves attending every day!", author: "Maria S.", role: "Parent", avatar: "https://i.pravatar.cc/150?img=3" },
+  ];
+
   return (
     <Flex gap="large" vertical>
       <Hero />
@@ -46,5 +52,6 @@ with all the details about the branch"
           'Kids Story - "daily development of children at 360 degrees."'
         ]}
       />
+      <Reviews reviews={reviewsData} />
     </Flex>);
 }
