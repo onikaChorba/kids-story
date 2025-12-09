@@ -4,6 +4,7 @@ import { Flex } from "antd";
 import { Question } from "../../section/question/question";
 import { AdditionalServices } from "../../section/additional-services/additional-services";
 import { VideoGallery } from "../../section/video-gallery/video-gallery";
+import { OurTeam } from "../../section/our-team/our-team";
 
 export const Home = () => {
   return (
@@ -13,5 +14,6 @@ export const Home = () => {
       <Question />
       <AdditionalServices />
       <VideoGallery />
+      <OurTeam />
     </Flex>);
 }
