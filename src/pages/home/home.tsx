@@ -9,6 +9,7 @@ import { Question } from "../../section/question/question";
 import { AboutCenter } from "../../section/about/about-center";
 import { VideoGallery } from "../../section/video-gallery/video-gallery";
 import { AdditionalServices } from "../../section/additional-services/additional-services";
+import CustomMap from "../../components/custom-map/custom-map";
 
 export const Home = () => {
 
@@ -53,5 +54,6 @@ with all the details about the branch"
         ]}
       />
       <Reviews reviews={reviewsData} />
+      <CustomMap />
     </Flex>);
 }

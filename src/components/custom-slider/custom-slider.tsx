@@ -15,8 +15,7 @@ interface CustomSliderProps {
   activeDotColor?: string;
 }
 
-export const CustomSlider = ({ children, slidesToShow = 4, className, dotColor = "#FDDC4E",
-  activeDotColor = "#EA5D4A", }: CustomSliderProps) => {
+export const CustomSlider = ({ children, slidesToShow = 4, className }: CustomSliderProps) => {
 
   const NextArrow = ({ onClick }: ArrowProps) => (
     <div className="arrow next" onClick={onClick}>
@@ -52,15 +51,5 @@ export const CustomSlider = ({ children, slidesToShow = 4, className, dotColor =
   };
 
   return <Slider {...settings} className={className}>{children}
-    <div style={{ display: 'none' }}>
-      <style>{`
-        .slick-dots li button {
-          background: ${dotColor};
-        }
-        .slick-dots li.slick-active button {
-          background: ${activeDotColor};
-        }
-      `}</style>
-    </div>
   </Slider>;
 };

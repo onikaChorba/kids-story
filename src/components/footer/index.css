@@ -1,0 +1,21 @@
+.footer {
+  padding: 60px 20px;
+}
+
+.footer .link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #334155;
+}
+
+.footer .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #334155 !important;
+}
