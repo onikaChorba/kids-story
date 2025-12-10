@@ -3,8 +3,9 @@ import { Layout } from 'antd';
 import { Routes, Route } from 'react-router-dom';
 import { HeaderCustom } from './components/header/header';
 import { Home } from './pages/home/home';
+import { CustomFooter } from './components/footer/footer';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 function About() {
   return <h1>About Page</h1>;
@@ -26,7 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Content>
-      <Footer >Foter</Footer>
+      <CustomFooter />
     </Layout>
   )
 }
