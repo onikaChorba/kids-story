@@ -126,11 +126,11 @@ export const HeaderCustom = () => {
         onClose={() => setOpen(false)}
         placement="right"
         size="default"
+        bodyStyle={{ padding: 0 }}
+        getContainer={false}
+        style={{ position: 'fixed' }}
       >
-        <Menu
-          mode="vertical"
-          items={items}
-        />
+        <Menu mode="vertical" items={items} />
       </Drawer>
     </>
   );
