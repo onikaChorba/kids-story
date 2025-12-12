@@ -1,9 +1,9 @@
-import { Layout, Menu, Button, Flex, Dropdown } from 'antd';
-import Icon, { PhoneFilled, DownOutlined } from '@ant-design/icons';
-import type { GetProps, MenuProps } from 'antd';
+import { Layout, Menu, Button, Flex, Dropdown, Drawer } from 'antd';
+import Icon, { PhoneFilled, DownOutlined, MenuOutlined } from '@ant-design/icons';
+import type { GetProps } from 'antd';
 import logo from '../../assets/img/logo.png';
 import { Link } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import './index.css'
 const { Header } = Layout;
 
@@ -31,8 +31,9 @@ const TelegramIcon: React.FC<Partial<CustomIconComponentProps>> = (props) => (
 
 
 export const HeaderCustom = () => {
+  const [open, setOpen] = useState(false);
 
-  const dropdownItemsAbout: MenuProps['items'] = [
+  const dropdownItemsAbout = [
     { key: 'center', label: <Link to="/about-center">About the Center</Link> },
     { key: 'documents', label: <Link to="/documents">Documents</Link> },
     { key: 'parents', label: <Link to="/for-parents">For Parents</Link> },
@@ -42,23 +43,24 @@ export const HeaderCustom = () => {
     { key: 'reviews', label: <Link to="/reviews">Reviews</Link> },
   ];
 
-  const dropdownItemsContacts: MenuProps['items'] = [
+  const dropdownItemsContacts = [
     { key: 'phone', label: 'Phone' },
     { key: 'email', label: 'Email' },
   ];
 
-  const dropdownItemsSchedule: MenuProps['items'] = [
+  const dropdownItemsSchedule = [
     { key: 'morning', label: 'Morning' },
     { key: 'evening', label: 'Evening' },
   ];
 
-  const items: MenuProps["items"] = [
+  const items = [
     {
       key: "about",
       label: (
         <Dropdown menu={{ items: dropdownItemsAbout }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
-            <Link to="/about">About us</Link></Button>
+          <Button icon={<DownOutlined />} iconPosition="end" type="text">
+            <Link to="/about">About us</Link>
+          </Button>
         </Dropdown>
       ),
     },
@@ -66,7 +68,7 @@ export const HeaderCustom = () => {
       key: "contactsDropdown",
       label: (
         <Dropdown menu={{ items: dropdownItemsContacts }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
+          <Button icon={<DownOutlined />} iconPosition="end" type="text">
             <Link to="/contact">Contacts</Link>
           </Button>
         </Dropdown>
@@ -76,53 +78,60 @@ export const HeaderCustom = () => {
       key: "schedule",
       label: (
         <Dropdown menu={{ items: dropdownItemsSchedule }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPlacement="end" type='text'>
+          <Button icon={<DownOutlined />} iconPosition="end" type="text">
             <Link to="/schedule">Schedule</Link>
           </Button>
         </Dropdown>
       ),
     },
-    { key: 'syllabus', label: <Link to="/syllabus">Syllabus</Link> },
-    { key: 'photo/video', label: <Link to="/photo-video">Photo and Video</Link> },
-    { key: 'teams', label: <Link to="/teams">Teams</Link> },
-    { key: 'contacts', label: <Link to="/contacts">Contacts</Link> },
+    { key: "syllabus", label: <Link to="/syllabus">Syllabus</Link> },
+    { key: "photo/video", label: <Link to="/photo-video">Photo and Video</Link> },
+    { key: "teams", label: <Link to="/teams">Teams</Link> },
+    { key: "contacts", label: <Link to="/contacts">Contacts</Link> },
   ];
 
   return (
-    <Header
-      className='header' >
-      <Link to="/"><img className="logo" src={logo} /></Link>
-      <Menu
-        theme="light"
-        mode="horizontal"
-        className="custom-menu"
-        defaultSelectedKeys={['2']}
-        items={items}
-        color='#334155'
-      />
-      <Flex gap="small" wrap>
-        <Button
-          type="text"
-          className='primary-grey-color'
-          icon={<PhoneFilled className='primary-orange-color' />}
-        >
-          +380967161448
+    <>
+      <Header className="header">
+        <Flex justify='space-between' className='header-mobile'>
+          <Link to="/" className='logo-wrapper'><img className="logo" src={logo} /></Link>
+          <Button
+            className="burger-btn"
+            type="text"
+            icon={<MenuOutlined />}
+            onClick={() => setOpen(true)}
+          />
+        </Flex>
+        <Menu
+          className="custom-menu"
+          mode="horizontal"
+          items={items}
+        />
+
+        <Flex className="header-icons" gap="small">
+          <Button type="text" icon={<PhoneFilled className='primary-orange-color' />}>
+            +380967161448
+          </Button>
+          <Button type="text" icon={<VKIcon />} />
+          <Button type="text" icon={<TelegramIcon />} />
+        </Flex>
+
+        <Button type="primary" className="custom-button">
+          Sign up for a tour
         </Button>
-        <Button
-          type="text"
-          icon={<VKIcon />}
-        />
-        <Button
-          type="text"
-          icon={<TelegramIcon />}
-        />
-      </Flex>
-      <Button
-        type="primary"
-        className='custom-button'
+      </Header>
+
+      <Drawer
+        open={open}
+        onClose={() => setOpen(false)}
+        placement="right"
+        width={260}
       >
-        Sign up for a tour
-      </Button>
-    </Header>
-  )
-}
+        <Menu
+          mode="vertical"
+          items={items}
+        />
+      </Drawer>
+    </>
+  );
+};

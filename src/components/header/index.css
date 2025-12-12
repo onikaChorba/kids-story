@@ -1,38 +1,53 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   background: white;
   height: 100px;
-  padding: 0px;
+  padding: 0 20px;
+}
+
+.header-mobile {
+  width: fit-content;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
-  width: 192px;
+  width: 160px;
+}
+
+.burger-btn {
+  display: none;
 }
 
 .custom-menu {
+  width: 100%;
   flex: 1;
   min-width: 0;
   background: white;
+  border-bottom: none !important;
 }
 
 .custom-menu .ant-menu-item-selected {
-  color: #EA5D4A !important;
+  color: #ea5d4a !important;
   background-color: transparent !important;
 }
 
-.custom-menu .ant-menu-item:hover::after {
-  border-bottom-color: #EA5D4A !important;
+.custom-menu .ant-menu-item:hover::after,
+.custom-menu .ant-menu-item-selected::after {
+  border-bottom-color: #ea5d4a !important;
 }
 
-.custom-menu .ant-menu-item-selected::after {
-  border-bottom-color: #EA5D4A !important;
+.header-icons {
+  white-space: nowrap;
 }
 
 .custom-button {
-  background: #8081BD;
+  background: #8081bd;
   border-radius: 50px;
   width: 192px;
   height: 40px;
@@ -41,12 +56,46 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   font-weight: 600;
   font-size: 14px;
-  transition: background 0.3s ease;
 }
 
 .custom-button:hover {
   background: #6a6ca0 !important;
+}
+
+@media (max-width: 1024px) {
+  .custom-menu {
+    display: none !important;
+  }
+
+  .header-mobile {
+    width: 100% !important;
+  }
+
+  .header-icons {
+    display: none;
+  }
+
+  .custom-button {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+  }
+
+  .logo {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+  }
+
+  .header {
+    height: 80px;
+  }
 }
