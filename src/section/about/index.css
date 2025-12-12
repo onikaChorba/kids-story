@@ -58,3 +58,27 @@
 .primary-orange-color {
   color: #ea5d4a;
 }
+
+@media (max-width: 768px) {
+  .textblock {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textblock {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .icon-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+}

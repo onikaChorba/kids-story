@@ -58,7 +58,7 @@ export const HeaderCustom = () => {
       key: "about",
       label: (
         <Dropdown menu={{ items: dropdownItemsAbout }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPosition="end" type="text">
+          <Button icon={<DownOutlined />} iconPlacement="end" type="text">
             <Link to="/about">About us</Link>
           </Button>
         </Dropdown>
@@ -68,7 +68,7 @@ export const HeaderCustom = () => {
       key: "contactsDropdown",
       label: (
         <Dropdown menu={{ items: dropdownItemsContacts }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPosition="end" type="text">
+          <Button icon={<DownOutlined />} iconPlacement="end" type="text">
             <Link to="/contact">Contacts</Link>
           </Button>
         </Dropdown>
@@ -78,7 +78,7 @@ export const HeaderCustom = () => {
       key: "schedule",
       label: (
         <Dropdown menu={{ items: dropdownItemsSchedule }} placement="bottom">
-          <Button icon={<DownOutlined />} iconPosition="end" type="text">
+          <Button icon={<DownOutlined />} iconPlacement="end" type="text">
             <Link to="/schedule">Schedule</Link>
           </Button>
         </Dropdown>
@@ -125,7 +125,7 @@ export const HeaderCustom = () => {
         open={open}
         onClose={() => setOpen(false)}
         placement="right"
-        width={260}
+        size="default"
       >
         <Menu
           mode="vertical"

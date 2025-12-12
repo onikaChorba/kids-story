@@ -1,17 +1,6 @@
 .our-team {
   position: relative;
-}
-
-.our-team .yellow {
-  position: absolute;
-  top: 30px;
-  left: 250px;
-}
-
-.our-team .green {
-  position: absolute;
-  top: 220px;
-  right: 300px;
+  padding: 60px 20px;
 }
 
 .slider .slick-slide {
@@ -24,7 +13,7 @@
 
 .card {
   width: 260px;
-  border-radius: 16;
+  border-radius: 16px;
   overflow: hidden;
   margin: 0 12px;
 }
@@ -36,7 +25,6 @@
 }
 
 .team-name {
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -45,9 +33,62 @@
 }
 
 .team-role {
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #334155;
+}
+
+.yellow,
+.green {
+  position: absolute;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    width: 200px;
+  }
+
+  .card-img {
+    height: 150px;
+  }
+
+  .team-name {
+    font-size: 18px;
+  }
+
+  .team-role {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 160px;
+    margin: 0 8px;
+  }
+
+  .card-img {
+    height: 120px;
+  }
+
+  .team-name {
+    font-size: 16px;
+  }
+
+  .team-role {
+    font-size: 12px;
+  }
+
+  .yellow {
+    top: -20px;
+    left: 50px;
+    width: 100px;
+  }
+
+  .green {
+    top: 150px;
+    right: 50px;
+    width: 60px;
+  }
 }

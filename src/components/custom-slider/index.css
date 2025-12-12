@@ -40,3 +40,34 @@
 .slick-dots li button:before{
   color: #FDDC4E !important;
 }
+
+.slider .slick-slide>div {
+  padding: 0 8px;
+}
+
+@media (max-width: 600px) {
+  .arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .arrow.next {
+    right: -10px;
+  }
+
+  .arrow.prev {
+    left: -10px;
+  }
+
+  .slick-dots {
+    bottom: -20px;
+  }
+
+  .slick-dots li {
+    margin: 0 4px;
+  }
+
+  .slick-dots li button:before {
+    font-size: 8px;
+  }
+}

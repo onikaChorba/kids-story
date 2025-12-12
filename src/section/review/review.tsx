@@ -1,8 +1,9 @@
 import "./index.css";
-import { Flex } from "antd";
+import { Flex, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { CustomSlider } from "../../components/custom-slider/custom-slider";
 
+const { Paragraph } = Typography;
 interface Review {
   text: string;
   author: string;
@@ -21,7 +22,7 @@ export const Reviews = ({ reviews }: ReviewsProps) => {
       <CustomSlider className="slider" slidesToShow={2}>
         {reviews.map((review, idx) => (
           <div key={idx} className="review-card">
-            <Flex gap="small" align="cenetr" justify="flex-start">
+            <Flex gap="small" align="center" justify="flex-start">
               <div>
                 {review.avatar ? (
                   <img src={review.avatar} alt={review.author} className="review-avatar" />
@@ -36,7 +37,13 @@ export const Reviews = ({ reviews }: ReviewsProps) => {
                 {review.role && <p className="review-role">{review.role}</p>}
               </Flex>
             </Flex>
-            <p className="review-text">"{review.text}"</p>
+            <p className="review-text">
+              <Paragraph
+                ellipsis={{ rows: 4, expandable: true, symbol: 'more' }}
+              >
+                {review.text}
+              </Paragraph>
+            </p>
           </div>
         ))}
       </CustomSlider>

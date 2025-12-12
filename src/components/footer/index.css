@@ -1,5 +1,6 @@
 .footer {
   padding: 60px 20px;
+  background: #f8f8f8;
 }
 
 .footer .link {
@@ -18,4 +19,85 @@
   display: flex;
   align-items: center;
   color: #334155 !important;
+}
+
+.footer .logo {
+  max-width: 150px;
+  margin-bottom: 16px;
+}
+
+.footer .ant-btn {
+  padding: 0;
+}
+
+.footer .ant-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Планшети */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer .ant-row {
+    flex-wrap: wrap !important;
+  }
+
+  .footer .ant-col {
+    flex: 1 1 45%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .footer .ant-row {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .footer .ant-col {
+    flex: 1 1 auto;
+    min-width: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .footer .logo {
+    max-width: 120px;
+    margin-bottom: 12px;
+  }
+
+  .footer .title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 6px;
+  }
+
+  .footer .link {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .footer .ant-btn {
+    padding: 0;
+    margin-right: 8px;
+  }
+
+  .footer .ant-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer div[style*="border-top"] {
+    margin-top: 20px;
+    padding-top: 10px;
+  }
 }

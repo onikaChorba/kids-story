@@ -22,7 +22,13 @@ export const About = () => {
     <section className="about">
       <Row justify="center" gutter={[0, 20]}>
         {aboutData.map((item, index) => (
-          <Col span={7} key={index}>
+          <Col
+            key={index}
+            xs={24}    // мобільні — 1 елемент у ряд
+            sm={12}    // планшети — 2 елементи
+            md={8}     // середній десктоп — 3 елементи
+            lg={7}     // великі десктопи — залишаємо як зараз
+          >
             <Flex align="center" gap={16}>
               <div className={`icon-wrapper ${item.color}`}>
                 <item.icon style={{ fontSize: 26, color: "white" }} />
@@ -33,5 +39,6 @@ export const About = () => {
         ))}
       </Row>
     </section>
+
   );
 };

@@ -1,21 +1,71 @@
-.additionalServices h2{
-  margin-bottom: 30px;
+.additionalServices {
+  padding: 40px 80px;
 }
 
-.additionalServices .box-item{
+.additionalServices h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.additionalServices .box-item {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  background: #FFF6D1;
+  background: #fff6d1;
   padding: 12px;
   border-radius: 12px;
+  margin: 10px;
+  flex: none;
 }
 
-.additionalServices .box-item .icon-wrapper{
+.additionalServices .box-item .icon-wrapper {
   width: 76px;
   height: 76px;
   background: white;
   border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.additionalServices .box-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #334155;
+}
+
+@media (max-width: 1024px) {
+  .additionalServices {
+    padding: 30px 40px;
+  }
+
+  .additionalServices .box-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .additionalServices {
+    padding: 20px;
+  }
+
+  .additionalServices .box-item {
+    flex: 1 1 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .additionalServices .box-item .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .additionalServices .box-item p {
+    font-size: 14px;
+  }
 }
