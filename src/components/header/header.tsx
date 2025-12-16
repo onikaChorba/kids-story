@@ -59,7 +59,7 @@ export const HeaderCustom = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsAbout }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type="text">
-            <Link to="/about">About us</Link>
+            <p>About us</p>
           </Button>
         </Dropdown>
       ),

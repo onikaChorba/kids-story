@@ -1,15 +1,16 @@
 import { Flex } from "antd";
-import { Hero } from "../../section/hero/hero";
-import { About } from "../../section/about/about";
-import { Reviews } from "../../section/review/review";
-import questionBg from '../../assets/img/question.png';
-import questionBg2 from '../../assets/img/question2.png';
-import { OurTeam } from "../../section/our-team/our-team";
-import { Question } from "../../section/question/question";
-import { AboutCenter } from "../../section/about/about-center";
-import { VideoGallery } from "../../section/video-gallery/video-gallery";
-import { AdditionalServices } from "../../section/additional-services/additional-services";
-import CustomMap from "../../components/custom-map/custom-map";
+import { Hero } from "../section/hero/hero";
+import { About } from "../section/about/about";
+import { Reviews } from "../section/review/review";
+import questionBg from '../assets/img/question.png';
+import questionBg2 from '../assets/img/question2.png';
+import { OurTeam } from "../section/our-team/our-team";
+import { Question } from "../section/question/question";
+import { AboutCenter } from "../section/about/about-center";
+import CustomMap from "../components/custom-map/custom-map";
+import { VideoGallery } from "../section/video-gallery/video-gallery";
+import { AdditionalServices } from "../section/additional-services/additional-services";
+
 
 export const Home = () => {
 
