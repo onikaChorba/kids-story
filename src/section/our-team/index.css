@@ -18,6 +18,12 @@
   margin: 0 12px;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .card-img {
   height: 200px;
   object-fit: cover;
@@ -42,6 +48,23 @@
 .yellow,
 .green {
   position: absolute;
+}
+
+.team-modal {
+  max-width: 420px;
+}
+
+.team-modal h3 {
+  margin-top: 12px;
+}
+
+.team-modal .role {
+  color: #888;
+  margin-bottom: 12px;
+}
+
+.team-modal ul {
+  padding-left: 18px;
 }
 
 @media (max-width: 1024px) {
