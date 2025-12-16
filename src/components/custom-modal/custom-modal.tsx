@@ -1,0 +1,23 @@
+import { Modal } from "antd";
+import './index.css';
+import type { ReactNode } from "react";
+
+type CustomModalProps = {
+  open: boolean;
+  onClose: () => void;
+  children: ReactNode;
+};
+
+export const CustomModal = ({ open, onClose, children }: CustomModalProps) => {
+  return (
+    <Modal
+      open={open}
+      onCancel={onClose}
+      footer={null}
+      centered
+      className="team-modal-wrapper"
+    >
+      {children}
+    </Modal>
+  );
+};

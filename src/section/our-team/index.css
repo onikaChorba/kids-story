@@ -67,6 +67,10 @@
   padding-left: 18px;
 }
 
+.team-modal-wrapper .ant-modal-content {
+  border-radius: 16px;
+}
+
 @media (max-width: 1024px) {
   .card {
     width: 200px;

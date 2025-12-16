@@ -1,9 +1,10 @@
 import './index.css'
 import { useState } from 'react';
-import { Card, Avatar, Button, Modal } from "antd";
 import "slick-carousel/slick/slick.css";
+import { Card, Avatar, Button } from "antd";
 import "slick-carousel/slick/slick-theme.css";
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
+import { CustomModal } from '../../components/custom-modal/custom-modal';
 import { CustomSlider } from "../../components/custom-slider/custom-slider";
 
 const { Meta } = Card;
@@ -162,7 +163,7 @@ export const OurTeam = () => {
         ))}
       </CustomSlider>
 
-      <Modal open={isModalOpen} onCancel={closeModal} footer={null} centered>
+      <CustomModal open={isModalOpen} onClose={closeModal}>
         {activeMember && (
           <div className="team-modal">
             <Avatar
@@ -197,7 +198,7 @@ export const OurTeam = () => {
             <p className="email">{activeMember.email}</p>
           </div>
         )}
-      </Modal>
+      </CustomModal>
 
       <svg className="yellow" width="145" height="97" viewBox="0 0 145 97" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M5.65768 79.4572C-2.28722 66.4765 -1.45925 50.0115 5.61229 40.9343C11.5974 33.2524 29.2515 30.7541 58.196 28.4205C87.1405 26.087 88.7689 -12.5611 118.818 4.2018C148.867 20.9647 154.865 55.8457 126.994 72.3991C99.1224 88.9525 26.5786 113.558 5.65768 79.4572Z" fill="#FDDC4E" />
