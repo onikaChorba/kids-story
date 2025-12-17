@@ -1,110 +1,109 @@
 .footer {
   padding: 60px 20px;
   background: #f8f8f8;
-}
-
-.footer .link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
   color: #334155;
 }
 
-.footer .title {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  color: #334155 !important;
+/* BRAND */
+.footer-brand {
+  max-width: 280px;
 }
 
 .footer .logo {
   max-width: 150px;
-  margin-bottom: 16px;
 }
 
-.footer .ant-btn {
+/* PHONE */
+.footer-phone {
   padding: 0;
-}
-
-.footer .ant-btn svg {
-  width: 24px;
-  height: 24px;
-}
-
-.footer-bottom {
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.05); /* світліший, щоб підходило до f8f8f8 */
-  text-align: center;
   color: #334155;
 }
 
+.footer-phone svg {
+  color: #f97316;
+}
+
+/* TEXT */
+.footer-description {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* TITLES */
+.footer-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* LINKS */
+.footer-link {
+  font-size: 12px;
+  color: #334155;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #f97316;
+}
+
+/* SOCIAL */
+.footer-social img {
+  width: 22px;
+  height: 22px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
+  font-size: 12px;
+}
+
+/* ===== TABLET ===== */
 @media (max-width: 1024px) {
   .footer {
     padding: 40px 20px;
   }
 
-  .footer .ant-row {
-    flex-wrap: wrap !important;
-  }
-
-  .footer .ant-col {
-    flex: 1 1 45%;
-    margin-bottom: 24px;
+  .footer .logo {
+    max-width: 130px;
   }
 }
 
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
   .footer {
-    padding: 20px 10px;
+    padding: 24px 16px;
   }
 
-  .footer .ant-row {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: flex-start;
-    gap: 12px;
-  }
-
-  .footer .ant-col {
-    flex: 1 1 auto;
-    min-width: 120px;
-    margin-bottom: 12px;
-    text-align: left;
+  .footer-brand {
+    max-width: 100%;
   }
 
   .footer .logo {
     max-width: 120px;
-    margin-bottom: 12px;
   }
 
-  .footer .title {
+  .footer-title {
     font-size: 12px;
-    line-height: 14px;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
-  .footer .link {
-    font-size: 10px;
-    line-height: 12px;
+  .footer-link {
+    font-size: 11px;
   }
 
-  .footer .ant-btn {
-    padding: 0;
-    margin-right: 8px;
-  }
-
-  .footer .ant-btn svg {
+  .footer-social img {
     width: 20px;
     height: 20px;
   }
 
-  .footer div[style*="border-top"] {
-    margin-top: 20px;
-    padding-top: 10px;
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 12px;
+    font-size: 11px;
   }
 }

@@ -1,8 +1,8 @@
-import './index.css'
+import './index.css';
 import { icons } from '../../icons';
-import { Link } from "react-router-dom";
-import { PhoneFilled, } from "@ant-design/icons";
-import { Layout, Row, Col, Space, Typography, Button, Flex } from "antd";
+import { Link } from 'react-router-dom';
+import { PhoneFilled } from '@ant-design/icons';
+import { Layout, Row, Col, Space, Typography, Button, Flex } from 'antd';
 
 const { Footer } = Layout;
 const { Title, Text } = Typography;
@@ -28,50 +28,60 @@ const CustomFooter = () => {
       { label: 'Group 5-7 years', path: '/about' },
     ],
     photos: [{ label: 'Photo', path: '/about' }],
-    team: [{ label: 'Photo', path: '/about' }],
+    team: [{ label: 'Team', path: '/about' }],
   };
 
   return (
     <Footer className="footer">
-      <Row gutter={[40, 32]} justify="start" wrap={false} style={{ flexWrap: "nowrap" }}>
-        <Col style={{ flex: "none" }}>
-          <Flex vertical align="flex-start" gap="small">
-            <Title level={3} style={{ marginBottom: 16 }}>
-              <Link to="/"><img className="logo" src={icons.logo} /></Link>
-            </Title>
+      <Row gutter={[24, 24]}>
+        <Col xs={24} sm={24} md={8} lg={6}>
+          <Flex vertical gap="small" className="footer-brand">
+            <Link to="/">
+              <img className="logo" src={icons.logo} alt="KidsStory logo" />
+            </Link>
 
             <Button
               type="text"
-              className='primary-grey-color'
-              icon={<PhoneFilled className='primary-orange-color' />}
+              className="footer-phone"
+              icon={<PhoneFilled />}
             >
-              +380967161448
+              +380 96 716 14 48
             </Button>
 
-            <Text>
-              Learning through play. Programming, design, and creativity courses for children aged 6-14.
+            <Text className="footer-description">
+              Learning through play. Programming, design, and creativity courses
+              for children aged 6–14.
             </Text>
 
-            <Flex>
-              <Button type="text" icon={<img src={icons.vk} />} />
-              <Button type="text" icon={<img src={icons.telegram} />} />
+            <Flex gap={12}>
+              <Button type="text" className="footer-social">
+                <img src={icons.vk} alt="VK" />
+              </Button>
+              <Button type="text" className="footer-social">
+                <img src={icons.telegram} alt="Telegram" />
+              </Button>
             </Flex>
           </Flex>
         </Col>
 
         {Object.entries(footerLinks).map(([key, links]) => (
-          <Col key={key} xs={24} sm={12} md={6} lg={4}>
-            <Title level={4} className="title">{key.charAt(0).toUpperCase() + key.slice(1)}</Title>
-            <Space vertical size={8}>
-              {links.map(link => (
-                <Link key={link.label} to={link.path} className="link">{link.label}</Link>
+          <Col key={key} xs={12} sm={8} md={4} lg={4}>
+            <Title level={5} className="footer-title">
+              {key.charAt(0).toUpperCase() + key.slice(1)}
+            </Title>
+
+            <Space vertical size={6}>
+              {links.map((link) => (
+                <Link key={link.label} to={link.path} className="footer-link">
+                  {link.label}
+                </Link>
               ))}
             </Space>
           </Col>
         ))}
       </Row>
 
-      <div className='footer-bottom'>
+      <div className="footer-bottom">
         <Text>© {new Date().getFullYear()} KidsStory. All rights reserved.</Text>
       </div>
     </Footer>
