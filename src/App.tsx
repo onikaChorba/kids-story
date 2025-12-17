@@ -1,11 +1,9 @@
 import './App.css';
 import { Layout } from 'antd';
 import { Routes, Route } from 'react-router-dom';
-import { HeaderCustom } from './components/header/header';
 import { Home } from './pages/home';
-import { CustomFooter } from './components/footer/footer';
 import { AboutCenterPage } from './pages/about-center';
-
+import { CustomHeader, CustomFooter } from './components';
 const { Content } = Layout;
 
 function Contact() {
@@ -13,10 +11,9 @@ function Contact() {
 }
 
 function App() {
-
   return (
     <Layout>
-      <HeaderCustom />
+      <CustomHeader />
       <Content style={{ background: "white", marginTop: '90px' }}>
         <Routes>
           <Route path="/" element={<Home />} />

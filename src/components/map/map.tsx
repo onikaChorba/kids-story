@@ -9,7 +9,7 @@ const customIcon = new L.Icon({
   iconAnchor: [20, 40],
 });
 
-export default function CustomMap() {
+const CustomMap = () => {
   return (
     <div style={{ height: "400px", width: "100%", borderRadius: "12px", overflow: "hidden" }}>
       <MapContainer
@@ -29,3 +29,5 @@ export default function CustomMap() {
     </div>
   );
 }
+
+export { CustomMap }

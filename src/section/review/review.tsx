@@ -1,7 +1,7 @@
 import "./index.css";
 import { Flex, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
-import { CustomSlider } from "../../components/custom-slider/custom-slider";
+import { CustomSlider } from "../../components";
 
 const { Paragraph } = Typography;
 interface Review {

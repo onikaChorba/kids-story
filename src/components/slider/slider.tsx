@@ -15,7 +15,7 @@ interface CustomSliderProps {
   activeDotColor?: string;
 }
 
-export const CustomSlider = ({ children, slidesToShow = 4, className }: CustomSliderProps) => {
+const CustomSlider = ({ children, slidesToShow = 4, className }: CustomSliderProps) => {
 
   const NextArrow = ({ onClick }: ArrowProps) => (
     <div className="arrow next" onClick={onClick}>
@@ -53,3 +53,5 @@ export const CustomSlider = ({ children, slidesToShow = 4, className }: CustomSl
   return <Slider {...settings} className={className}>{children}
   </Slider>;
 };
+
+export { CustomSlider };

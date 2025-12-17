@@ -29,8 +29,7 @@ const TelegramIcon: React.FC<Partial<CustomIconComponentProps>> = (props) => (
   <Icon component={TelegramSVG} {...props} />
 );
 
-
-export const HeaderCustom = () => {
+const CustomHeader = () => {
   const [open, setOpen] = useState(false);
 
   const dropdownItemsAbout = [
@@ -135,3 +134,5 @@ export const HeaderCustom = () => {
     </>
   );
 };
+
+export { CustomHeader }

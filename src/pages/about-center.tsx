@@ -6,7 +6,7 @@ import { VideoGallery } from "../section/video-gallery/video-gallery";
 import { AdditionalServices } from "../section/additional-services/additional-services";
 import { Question } from "../section/question/question";
 import questionBg3 from '../assets/img/question3.png'
-import CustomMap from "../components/custom-map/custom-map";
+import { CustomMap } from "../components";
 
 export const AboutCenterPage = () => {
   return (

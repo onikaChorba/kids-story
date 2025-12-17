@@ -3,9 +3,8 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import { Card, Avatar, Button } from "antd";
 import "slick-carousel/slick/slick-theme.css";
+import { CustomModal, CustomSlider } from '../../components';
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
-import { CustomModal } from '../../components/custom-modal/custom-modal';
-import { CustomSlider } from "../../components/custom-slider/custom-slider";
 
 const { Meta } = Card;
 

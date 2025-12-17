@@ -32,8 +32,7 @@ const TelegramIcon: React.FC<Partial<CustomIconComponentProps>> = (props) => (
   <Icon component={TelegramSVG} {...props} />
 );
 
-
-export const CustomFooter = () => {
+const CustomFooter = () => {
   return (
     <Footer className="footer">
       <Row gutter={[40, 32]} justify="start" wrap={false} style={{ flexWrap: "nowrap" }}>
@@ -122,3 +121,5 @@ export const CustomFooter = () => {
     </Footer>
   );
 };
+
+export { CustomFooter };
