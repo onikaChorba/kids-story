@@ -1,17 +1,9 @@
 import { Flex } from "antd";
-import { Hero } from "../../section/hero/hero";
-import { About } from "../../section/about/about";
-import { Reviews } from "../../section/review/review";
-import questionBg from '../../assets/img/question.png';
-import questionBg2 from '../../assets/img/question2.png';
-import { OurTeam } from "../../section/our-team/our-team";
-import { Question } from "../../section/question/question";
-import { AboutCenter } from "../../section/about/about-center";
-import { VideoGallery } from "../../section/video-gallery/video-gallery";
-import { AdditionalServices } from "../../section/additional-services/additional-services";
-import CustomMap from "../../components/custom-map/custom-map";
+import { icons } from "../icons";
+import { CustomMap } from "../components";
+import { Hero, About, Reviews, OurTeam, AboutCenter, Question, VideoGallery, AdditionalServices } from "../section";
 
-export const Home = () => {
+const Home = () => {
 
   const reviewsData = [
     { text: "We're taking two children here and are very pleased with the level and quality of education. If you're just looking for a preschool, this isn't the place for you. The children know English (pronunciation, grammar, etc.)", author: "Olga K.", role: "Parent", avatar: "https://i.pravatar.cc/150?img=1" },
@@ -26,7 +18,7 @@ export const Home = () => {
       <Question
         title="Have questions? Get a free consultation."
         description="Leave your phone number and we'll call you back with all the details about the branch"
-        background={questionBg}
+        background={icons.questionBg}
         inputBg="#f0f0f0"
         buttonText="Send Request"
         radioLabel="I agree with privacy policy"
@@ -41,7 +33,7 @@ export const Home = () => {
         title="Still have questions?"
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
-        background={questionBg2}
+        background={icons.questionBg2}
       />
       <AboutCenter
         title="About our center"
@@ -57,3 +49,5 @@ with all the details about the branch"
       <CustomMap />
     </Flex>);
 }
+
+export { Home };

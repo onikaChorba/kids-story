@@ -1,15 +1,15 @@
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import marker from '../../assets/icons/marker.svg'
+import { icons } from '../../icons';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 const customIcon = new L.Icon({
-  iconUrl: marker,
+  iconUrl: icons.marker,
   iconSize: [40, 40],
   iconAnchor: [20, 40],
 });
 
-export default function CustomMap() {
+const CustomMap = () => {
   return (
     <div style={{ height: "400px", width: "100%", borderRadius: "12px", overflow: "hidden" }}>
       <MapContainer
@@ -29,3 +29,5 @@ export default function CustomMap() {
     </div>
   );
 }
+
+export { CustomMap }

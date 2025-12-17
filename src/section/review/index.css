@@ -16,7 +16,7 @@
 }
 
 .review-card {
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 24px;
   margin: 0 10px;
   text-align: center;
@@ -25,21 +25,18 @@
   flex-direction: column;
   justify-content: center;
   background: white;
-  border-radius: 20px;
 }
 
-.review-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
+.review-avatar,
 .review-avatar-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  margin: 0 auto 12px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.review-avatar-icon {
   background: #8081bd;
   display: flex;
   justify-content: center;
@@ -47,35 +44,106 @@
 }
 
 .review-text {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 12px;
-  color: #334155;
-  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
+  color: #334155;
   text-align: left;
+  margin-bottom: 12px;
 }
 
 .review-author {
-  margin: 0 auto;
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
-  display: flex;
-  align-items: center;
   color: #334155;
   padding-left: 20px;
 }
 
 .review-role {
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: #334155;
-  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .reviews {
+    padding: 40px 30px;
+  }
+
+  .review-card {
+    padding: 20px;
+    min-height: 220px;
+  }
+
+  .review-avatar,
+  .review-avatar-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .review-text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .review-author {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .reviews {
+    padding: 20px 10px;
+  }
+
+  .reviews .slider .slick-slide img,
+  .reviews .slider .slick-slide img {
+    height: 36px !important;
+  }
+
+  .triangle-pink {
+    top: 5px;
+    right: 10px;
+    width: 100px;
+    height: auto;
+  }
+
+  .review-card {
+    padding: 12px;
+    margin: 0 4px;
+    min-height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .review-avatar,
+  .review-avatar-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .review-text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .review-author {
+    font-size: 14px;
+    padding-left: 0;
+    margin-bottom: 2px;
+  }
+
+  .review-role {
+    font-size: 12px;
+  }
+
+  .reviews .triangle-pink {
+    display: none;
+  }
 }

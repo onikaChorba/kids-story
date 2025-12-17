@@ -5,7 +5,7 @@ import {
   MessageOutlined, UserOutlined, MedicineBoxOutlined, ShopOutlined
 } from "@ant-design/icons";
 
-export const About = () => {
+const About = () => {
   const aboutData = [
     { icon: ClockCircleOutlined, color: "primary-orange-light-bg", text: <><b>Hours of operation:</b> from 7:00 a.m. to 7:00 p.m</> },
     { icon: GroupOutlined, color: "primary-pink-light-bg", text: <><b>Groups:</b> up to 15 people</> },
@@ -22,7 +22,13 @@ export const About = () => {
     <section className="about">
       <Row justify="center" gutter={[0, 20]}>
         {aboutData.map((item, index) => (
-          <Col span={7} key={index}>
+          <Col
+            key={index}
+            xs={24}
+            sm={12}
+            md={8}
+            lg={7}
+          >
             <Flex align="center" gap={16}>
               <div className={`icon-wrapper ${item.color}`}>
                 <item.icon style={{ fontSize: 26, color: "white" }} />
@@ -35,3 +41,5 @@ export const About = () => {
     </section>
   );
 };
+
+export { About }

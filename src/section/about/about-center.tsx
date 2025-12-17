@@ -1,16 +1,16 @@
 import './index.css'
 interface AboutCenterProps {
+  list: string[];
   title: string;
   description: string;
   highlightText: string;
-  list: string[];
 }
 
-export const AboutCenter = ({
+const AboutCenter = ({
+  list,
   title,
   description,
   highlightText,
-  list
 }: AboutCenterProps) => {
   return (
     <section className="about-center">
@@ -25,3 +25,4 @@ export const AboutCenter = ({
     </section>
   )
 }
+export { AboutCenter }

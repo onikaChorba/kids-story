@@ -1,0 +1,8 @@
+.ant-modal-mask {
+  background: linear-gradient(130.83deg,
+      rgba(128, 129, 189, 0.8) 14.95%,
+      rgba(128, 129, 189, 0.8) 79.77%) !important;
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}

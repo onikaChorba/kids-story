@@ -1,15 +1,16 @@
 import './index.css'
+import { icons } from '../../icons'
 import { Button, Flex, Form, Input, Radio } from 'antd'
-import heroImg from '../../assets/img/hero.png'
-export const Hero = () => {
+
+const Hero = () => {
   return (
-    <Flex align='center' justify='center' gap="small" wrap style={{ position: 'relative' }} className='hero'>
+    <Flex align='center' justify='center' gap="small" wrap style={{ position: 'relative', marginTop: '100px' }} className='hero'>
       <Flex vertical className='textblock' gap="small">
         <h1>Kidsstory</h1>
         <h2>English for children
           garden and club</h2>
       </Flex>
-      <img src={heroImg} width="100%" />
+      <img src={icons.heroImg} width="100%" />
       <Form style={{ position: 'absolute', right: '0px' }} className='form'>
         <Flex vertical>
           <h2>Sign up
@@ -50,3 +51,5 @@ export const Hero = () => {
     </Flex>
   )
 }
+
+export { Hero }

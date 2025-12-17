@@ -1,29 +1,23 @@
 import './App.css';
 import { Layout } from 'antd';
+import { Home, AboutCenterPage } from './pages';
 import { Routes, Route } from 'react-router-dom';
-import { HeaderCustom } from './components/header/header';
-import { Home } from './pages/home/home';
-import { CustomFooter } from './components/footer/footer';
+import { CustomHeader, CustomFooter } from './components';
 
 const { Content } = Layout;
-
-function About() {
-  return <h1>About Page</h1>;
-}
 
 function Contact() {
   return <h1>Contact Page</h1>;
 }
 
 function App() {
-
   return (
     <Layout>
-      <HeaderCustom />
-      <Content style={{ background: "white" }}>
+      <CustomHeader />
+      <Content style={{ background: "white", marginTop: '90px' }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about-center" element={<AboutCenterPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Content>
