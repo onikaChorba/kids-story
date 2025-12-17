@@ -38,13 +38,13 @@ const Reviews = ({ reviews }: ReviewsProps) => {
                 {review.role && <p className="review-role">{review.role}</p>}
               </Flex>
             </Flex>
-            <p className="review-text">
+            <div className="review-text">
               <Paragraph
                 ellipsis={{ rows: 4, expandable: true, symbol: 'more' }}
               >
                 {review.text}
               </Paragraph>
-            </p>
+            </div>
           </div>
         ))}
       </CustomSlider>
