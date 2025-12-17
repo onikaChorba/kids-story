@@ -35,7 +35,14 @@
   height: 24px;
 }
 
-/* Планшети */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* світліший, щоб підходило до f8f8f8 */
+  text-align: center;
+  color: #334155;
+}
+
 @media (max-width: 1024px) {
   .footer {
     padding: 40px 20px;

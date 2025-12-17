@@ -1,5 +1,5 @@
-import { Modal } from "antd";
 import './index.css';
+import { Modal } from "antd";
 import type { ReactNode } from "react";
 
 type CustomModalProps = {
