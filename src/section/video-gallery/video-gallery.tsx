@@ -1,21 +1,17 @@
-import Slider from "react-slick";
 import './index.css'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import img1 from '../../assets/img/img1.png';
-import img2 from '../../assets/img/img2.png';
-import img3 from '../../assets/img/img3.png';
+import Slider from "react-slick";
+import { icons } from "../../icons";
+import { Image, Row, Col, Flex } from "antd";
 import {
   HddOutlined,
-  LaptopOutlined,
-  SmileOutlined,
   BulbOutlined,
   SoundOutlined,
+  SmileOutlined,
+  LaptopOutlined,
   UserSwitchOutlined
 } from "@ant-design/icons";
-import { Image, Row, Col, Flex } from "antd";
 
-const images = [img1, img2, img3, img1, img2];
+const images = [icons.img1, icons.img2, icons.img3, icons.img1, icons.img2];
 
 const advantagesData = [
   { icon: HddOutlined, color: "primary-orange-light-bg", text: <><b>Master classes</b></> },
@@ -29,12 +25,12 @@ const advantagesData = [
 const VideoGallery = () => {
   const settings = {
     dots: true,
-    infinite: true,
-    centerMode: true,
-    centerPadding: "0px",
-    slidesToShow: 3,
     speed: 500,
     autoplay: true,
+    infinite: true,
+    centerMode: true,
+    slidesToShow: 3,
+    centerPadding: "0px",
     autoplaySpeed: 3000,
   };
 

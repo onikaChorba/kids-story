@@ -5,23 +5,23 @@ import { Flex, Input, Button, Radio } from 'antd';
 interface QuestionProps {
   title: string;
   description: string;
-  background?: string;
   inputBg?: string;
   buttonBg?: string;
   textColor?: string;
   radioLabel?: string;
   buttonText?: string;
   placeholder?: string;
+  background?: string;
 }
 const Question = ({
   title,
   description,
-  background,
   textColor = "#fff",
   inputBg = "#fff",
   buttonBg = "#ea5d4a",
   radioLabel = "I accept the terms user agreement",
   buttonText = "Send",
+  background,
   placeholder = "+ 3 _  _  _  -  _  _  _  -  _  _  -  _  _",
 }: QuestionProps) => {
   return (

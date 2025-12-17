@@ -1,9 +1,9 @@
+import { icons } from "../icons";
+import { Link } from "react-router-dom";
+import { CustomMap } from "../components";
 import { Breadcrumb, Flex, Image } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
 import { Question, AboutCenter, VideoGallery, AdditionalServices } from "../section";
-import questionBg3 from '../assets/img/question3.png'
-import { CustomMap } from "../components";
 
 const AboutCenterPage = () => {
   return (
@@ -69,7 +69,7 @@ const AboutCenterPage = () => {
         title="Still have questions?"
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
-        background={questionBg3}
+        background={icons.questionBg3}
       />
       <CustomMap />
     </Flex>

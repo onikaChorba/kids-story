@@ -1,8 +1,7 @@
 import { Flex } from "antd";
+import { icons } from "../icons";
 import { CustomMap } from "../components";
 import { Hero, About, Reviews, OurTeam, AboutCenter, Question, VideoGallery, AdditionalServices } from "../section";
-import questionBg from '../assets/img/question.png';
-import questionBg2 from '../assets/img/question2.png';
 
 const Home = () => {
 
@@ -19,7 +18,7 @@ const Home = () => {
       <Question
         title="Have questions? Get a free consultation."
         description="Leave your phone number and we'll call you back with all the details about the branch"
-        background={questionBg}
+        background={icons.questionBg}
         inputBg="#f0f0f0"
         buttonText="Send Request"
         radioLabel="I agree with privacy policy"
@@ -34,7 +33,7 @@ const Home = () => {
         title="Still have questions?"
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
-        background={questionBg2}
+        background={icons.questionBg2}
       />
       <AboutCenter
         title="About our center"
