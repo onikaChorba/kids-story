@@ -1,9 +1,9 @@
 import './App.css';
 import { Layout } from 'antd';
+import { Home, AboutCenterPage } from './pages';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from './pages/home';
-import { AboutCenterPage } from './pages/about-center';
 import { CustomHeader, CustomFooter } from './components';
+
 const { Content } = Layout;
 
 function Contact() {

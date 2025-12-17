@@ -1,14 +1,11 @@
 import { Breadcrumb, Flex, Image } from "antd";
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import { AboutCenter } from "../section/about/about-center";
-import { VideoGallery } from "../section/video-gallery/video-gallery";
-import { AdditionalServices } from "../section/additional-services/additional-services";
-import { Question } from "../section/question/question";
+import { Question, AboutCenter, VideoGallery, AdditionalServices } from "../section";
 import questionBg3 from '../assets/img/question3.png'
 import { CustomMap } from "../components";
 
-export const AboutCenterPage = () => {
+const AboutCenterPage = () => {
   return (
     <Flex vertical gap="large">
       <Breadcrumb
@@ -78,3 +75,5 @@ with all the details about the branch"
     </Flex>
   );
 };
+
+export { AboutCenterPage }

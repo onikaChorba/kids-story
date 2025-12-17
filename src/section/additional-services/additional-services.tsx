@@ -3,7 +3,7 @@ import React from "react";
 import { Flex } from "antd";
 import { YuqueOutlined, ProductOutlined, MedicineBoxOutlined, PicLeftOutlined, HighlightOutlined, PieChartOutlined, MessageOutlined, RiseOutlined, AimOutlined, CoffeeOutlined, ExperimentOutlined } from "@ant-design/icons";
 
-export const AdditionalServices = () => {
+const AdditionalServices = () => {
   const services = [
     { icon: YuqueOutlined, text: "Yoga", color: "#8081BD" },
     { icon: ProductOutlined, text: "Montessori classroom with unique wooden equipment", color: "#8081BD" },
@@ -36,3 +36,5 @@ export const AdditionalServices = () => {
     </section>
   );
 };
+
+export { AdditionalServices }

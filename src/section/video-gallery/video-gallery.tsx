@@ -26,7 +26,7 @@ const advantagesData = [
   { icon: UserSwitchOutlined, color: "primary-pink-light-bg", text: <><b>Competitions</b></> },
 ];
 
-export const VideoGallery = () => {
+const VideoGallery = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -75,3 +75,5 @@ export const VideoGallery = () => {
     </section>
   );
 };
+
+export { VideoGallery }

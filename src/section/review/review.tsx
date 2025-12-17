@@ -15,7 +15,7 @@ interface ReviewsProps {
   reviews: Review[];
 }
 
-export const Reviews = ({ reviews }: ReviewsProps) => {
+const Reviews = ({ reviews }: ReviewsProps) => {
   return (
     <section className="reviews">
       <h2>Reviews of the garden</h2>
@@ -55,3 +55,5 @@ export const Reviews = ({ reviews }: ReviewsProps) => {
     </section>
   );
 };
+
+export { Reviews }

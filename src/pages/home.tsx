@@ -1,18 +1,10 @@
 import { Flex } from "antd";
 import { CustomMap } from "../components";
-import { Hero } from "../section/hero/hero";
-import { About } from "../section/about/about";
-import { Reviews } from "../section/review/review";
+import { Hero, About, Reviews, OurTeam, AboutCenter, Question, VideoGallery, AdditionalServices } from "../section";
 import questionBg from '../assets/img/question.png';
 import questionBg2 from '../assets/img/question2.png';
-import { OurTeam } from "../section/our-team/our-team";
-import { Question } from "../section/question/question";
-import { AboutCenter } from "../section/about/about-center";
-import { VideoGallery } from "../section/video-gallery/video-gallery";
-import { AdditionalServices } from "../section/additional-services/additional-services";
 
-
-export const Home = () => {
+const Home = () => {
 
   const reviewsData = [
     { text: "We're taking two children here and are very pleased with the level and quality of education. If you're just looking for a preschool, this isn't the place for you. The children know English (pronunciation, grammar, etc.)", author: "Olga K.", role: "Parent", avatar: "https://i.pravatar.cc/150?img=1" },
@@ -58,3 +50,5 @@ with all the details about the branch"
       <CustomMap />
     </Flex>);
 }
+
+export { Home };

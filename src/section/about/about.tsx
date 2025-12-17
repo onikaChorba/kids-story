@@ -5,7 +5,7 @@ import {
   MessageOutlined, UserOutlined, MedicineBoxOutlined, ShopOutlined
 } from "@ant-design/icons";
 
-export const About = () => {
+const About = () => {
   const aboutData = [
     { icon: ClockCircleOutlined, color: "primary-orange-light-bg", text: <><b>Hours of operation:</b> from 7:00 a.m. to 7:00 p.m</> },
     { icon: GroupOutlined, color: "primary-pink-light-bg", text: <><b>Groups:</b> up to 15 people</> },
@@ -24,10 +24,10 @@ export const About = () => {
         {aboutData.map((item, index) => (
           <Col
             key={index}
-            xs={24}    // мобільні — 1 елемент у ряд
-            sm={12}    // планшети — 2 елементи
-            md={8}     // середній десктоп — 3 елементи
-            lg={7}     // великі десктопи — залишаємо як зараз
+            xs={24}
+            sm={12}
+            md={8}
+            lg={7}
           >
             <Flex align="center" gap={16}>
               <div className={`icon-wrapper ${item.color}`}>
@@ -42,3 +42,5 @@ export const About = () => {
 
   );
 };
+
+export { About }

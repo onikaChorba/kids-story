@@ -8,7 +8,7 @@ import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
 
-export const OurTeam = () => {
+const OurTeam = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeMember, setActiveMember] = useState<any>(null);
 
@@ -208,3 +208,5 @@ export const OurTeam = () => {
     </section>
   )
 }
+
+export { OurTeam }

@@ -13,8 +13,7 @@ interface QuestionProps {
   buttonText?: string;
   placeholder?: string;
 }
-
-export const Question = ({
+const Question = ({
   title,
   description,
   background,
@@ -66,3 +65,5 @@ export const Question = ({
     </section>
   )
 }
+
+export { Question }

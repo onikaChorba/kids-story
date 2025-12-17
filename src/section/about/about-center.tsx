@@ -6,7 +6,7 @@ interface AboutCenterProps {
   list: string[];
 }
 
-export const AboutCenter = ({
+const AboutCenter = ({
   title,
   description,
   highlightText,
@@ -25,3 +25,4 @@ export const AboutCenter = ({
     </section>
   )
 }
+export { AboutCenter }

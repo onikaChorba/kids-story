@@ -1,7 +1,8 @@
 import './index.css'
 import { Button, Flex, Form, Input, Radio } from 'antd'
 import heroImg from '../../assets/img/hero.png'
-export const Hero = () => {
+
+const Hero = () => {
   return (
     <Flex align='center' justify='center' gap="small" wrap style={{ position: 'relative', marginTop: '100px' }} className='hero'>
       <Flex vertical className='textblock' gap="small">
@@ -50,3 +51,5 @@ export const Hero = () => {
     </Flex>
   )
 }
+
+export { Hero }
