@@ -46,10 +46,7 @@ const CustomHeader = () => {
     },
     {
       key: 'reviews', label:
-        <ComingSoonLink>
-          Reviews
-          {/* <Link to="/reviews">Reviews</Link> */}
-        </ComingSoonLink>
+        <Link to="/reviews">Reviews</Link>
     },
   ];
 
