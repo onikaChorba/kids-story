@@ -17,10 +17,8 @@ const CustomHeader = () => {
       key: 'documents', label: <Link to="/documents">Documents</Link>
     },
     {
-      key: 'parents', label: <ComingSoonLink>
-        For Parents
-        {/* <Link to="/for-parents">For Parents</Link> */}
-      </ComingSoonLink>
+      key: 'parents', label:
+        <Link to="/parents">For Parents</Link>
     },
     {
       key: 'meals', label: <ComingSoonLink>
