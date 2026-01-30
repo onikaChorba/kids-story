@@ -1,16 +1,19 @@
-import { Flex, Row, Col, Card, Typography } from "antd";
-import {
-  CustomerServiceOutlined,
-  AppstoreOutlined,
-  FlagOutlined,
-  BuildOutlined,
-  ExperimentOutlined,
-  AudioOutlined,
-  RiseOutlined,
-} from "@ant-design/icons";
 import { icons } from '../icons';
+import { Link } from "react-router-dom";
+import { About, Question } from "../section";
+import { HomeOutlined } from "@ant-design/icons";
+import { Flex, Row, Col, Card, Typography, Breadcrumb } from "antd";
+import {
+  RiseOutlined,
+  FlagOutlined,
+  AudioOutlined,
+  BuildOutlined,
+  AppstoreOutlined,
+  ExperimentOutlined,
+  CustomerServiceOutlined,
+} from "@ant-design/icons";
 
-const { Text, Title } = Typography;
+const { Text } = Typography;
 
 const services = [
   { id: 1, title: "Yoga", img: icons.extra1, icon: CustomerServiceOutlined },
@@ -24,8 +27,23 @@ const services = [
 
 const ExtraServices = () => {
   return (
-    <div style={{ padding: '20px' }}>
-      <Title level={2} style={{ marginBottom: '40px' }}>Additional services</Title>
+    <Flex vertical gap={20} style={{ padding: '20px 40px' }}>
+      <Breadcrumb
+        items={[
+          {
+            title: (
+              <Link to="/">
+                <HomeOutlined />
+              </Link>
+            ),
+          },
+          {
+            title: "Additional services",
+          },
+        ]}
+      />
+
+      <h2>Additional services</h2>
 
       <Row gutter={[20, 20]}>
         {services.map((service) => {
@@ -81,7 +99,17 @@ const ExtraServices = () => {
           );
         })}
       </Row>
-    </div>
+      <About />
+      <Question
+        textColor="#334155"
+        inputBg="#FDDC4E"
+        buttonBg="#EA5D4A"
+        title="Still have questions?"
+        description="Leave your phone number and we'll call you back
+with all the details about the branch"
+        background={icons.questionBg2}
+      />
+    </Flex>
   );
 };
 

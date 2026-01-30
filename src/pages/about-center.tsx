@@ -7,7 +7,7 @@ import { Question, AboutCenter, VideoGallery, AdditionalServices } from "../sect
 
 const AboutCenterPage = () => {
   return (
-    <Flex vertical gap="large">
+    <Flex vertical gap={20} style={{ padding: '20px 40px' }}>
       <Breadcrumb
         items={[
           {

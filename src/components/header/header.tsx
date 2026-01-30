@@ -116,10 +116,7 @@ const CustomHeader = () => {
     },
     {
       key: "teams", label:
-        <ComingSoonLink>
-          Teams
-          {/* <Link to="/teams">Teams</Link> */}
-        </ComingSoonLink>
+        <Link to="/our-team">Teams</Link>
     },
     {
       key: "contacts", label:
