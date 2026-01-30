@@ -14,10 +14,7 @@ const CustomHeader = () => {
   const dropdownItemsAbout = [
     { key: 'center', label: <Link to="/about-center">About the Center</Link> },
     {
-      key: 'documents', label: <ComingSoonLink>
-        {/* <Link to="/for-parents">Documents</Link> */}
-        Documents
-      </ComingSoonLink>
+      key: 'documents', label: <Link to="/documents">Documents</Link>
     },
     {
       key: 'parents', label: <ComingSoonLink>

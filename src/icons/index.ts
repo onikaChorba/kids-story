@@ -1,4 +1,5 @@
 import vk from "../assets/icons/vk.svg";
+import doc from "../assets/img/doc1.png";
 import img1 from "../assets/img/img1.png";
 import img2 from "../assets/img/img2.png";
 import img3 from "../assets/img/img3.png";
@@ -24,6 +25,7 @@ import yellowElement from "../assets/icons/yellow-element.svg";
 
 export const icons = {
   vk,
+  doc,
   img1,
   img2,
   img3,
