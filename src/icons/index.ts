@@ -4,6 +4,13 @@ import img2 from "../assets/img/img2.png";
 import img3 from "../assets/img/img3.png";
 import logo from "../assets/img/logo.png";
 import heroImg from "../assets/img/hero.png";
+import extra1 from "../assets/img/extra1.png";
+import extra2 from "../assets/img/extra2.png";
+import extra3 from "../assets/img/extra3.png";
+import extra4 from "../assets/img/extra4.png";
+import extra5 from "../assets/img/extra5.png";
+import extra6 from "../assets/img/extra6.png";
+import extra7 from "../assets/img/extra7.png";
 import marker from "../assets/icons/marker.svg";
 import telegram from "../assets/icons/telegram.svg";
 import questionBg from "../assets/img/question.png";
@@ -22,6 +29,13 @@ export const icons = {
   img3,
   logo,
   marker,
+  extra1,
+  extra2,
+  extra3,
+  extra4,
+  extra5,
+  extra6,
+  extra7,
   heroImg,
   telegram,
   prevArrow,

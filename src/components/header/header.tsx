@@ -54,14 +54,16 @@ const CustomHeader = () => {
   ];
 
   const dropdownItemsContacts = [
-    { key: 'phone', label: 'Phone' },
-    { key: 'email', label: 'Email' },
+    {
+      key: 'phone', label: <ComingSoonLink>Phone</ComingSoonLink>
+    },
+    { key: 'email', label: <ComingSoonLink>Email</ComingSoonLink> },
   ];
 
   const dropdownItemsSchedule = [
-    { key: 'morning', label: 'Morning' },
-    { key: 'evening', label: 'Evening' },
-    { key: 'Additional Services', label: 'Additional Services' }
+    { key: 'morning', label: <ComingSoonLink>Morning</ComingSoonLink> },
+    { key: 'evening', label: <ComingSoonLink>Evening</ComingSoonLink> },
+    { key: 'Additional Services', label: <Link to="schedule/extra-services">Additional Services</Link> }
   ];
 
   const items = [
@@ -93,10 +95,7 @@ const CustomHeader = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsSchedule }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type="text">
-            <ComingSoonLink>
-              Schedule
-              {/* <Link to="/schedule">Schedule</Link> */}
-            </ComingSoonLink>
+            Schedule
           </Button>
         </Dropdown>
       ),

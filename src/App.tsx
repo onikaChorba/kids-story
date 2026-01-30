@@ -1,6 +1,6 @@
 import './App.css';
 import { Layout } from 'antd';
-import { Home, AboutCenterPage } from "./pages";
+import { Home, AboutCenterPage, ExtraServices } from "./pages";
 import { Routes, Route } from 'react-router-dom';
 import { CustomHeader, CustomFooter } from './components';
 
@@ -19,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-center" element={<AboutCenterPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='schedule/extra-services' element={<ExtraServices />} />
         </Routes>
       </Content>
       <CustomFooter />
