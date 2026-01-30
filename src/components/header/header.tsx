@@ -115,4 +115,4 @@ const CustomHeader = () => {
   );
 };
 
-export { CustomHeader }
+export default CustomHeader 

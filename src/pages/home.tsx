@@ -50,4 +50,4 @@ with all the details about the branch"
     </Flex>);
 }
 
-export { Home };
+export default Home;

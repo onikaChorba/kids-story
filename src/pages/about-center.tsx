@@ -76,4 +76,4 @@ with all the details about the branch"
   );
 };
 
-export { AboutCenterPage }
+export default AboutCenterPage 

@@ -48,4 +48,4 @@ const CustomSlider = ({ children, slidesToShow = 4, className }: CustomSliderPro
   return <Slider {...settings} className={className}>{children}</Slider>;
 };
 
-export { CustomSlider };
+export default CustomSlider;

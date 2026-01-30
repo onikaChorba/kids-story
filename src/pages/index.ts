@@ -1,4 +1,3 @@
-import { Home } from "./home";
-import { AboutCenterPage } from "./about-center";
+export { default as Home } from "./home";
+export { default as AboutCenterPage } from "./about-center";
 
-export { Home, AboutCenterPage }

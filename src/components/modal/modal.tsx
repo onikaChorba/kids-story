@@ -22,4 +22,4 @@ const CustomModal = ({ open, onClose, children }: CustomModalProps) => {
   );
 };
 
-export { CustomModal }
+export default CustomModal

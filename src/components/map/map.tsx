@@ -30,4 +30,4 @@ const CustomMap = () => {
   );
 }
 
-export { CustomMap }
+export default CustomMap

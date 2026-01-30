@@ -88,4 +88,4 @@ const CustomFooter = () => {
   );
 };
 
-export { CustomFooter };
+export default CustomFooter;

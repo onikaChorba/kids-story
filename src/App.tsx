@@ -1,6 +1,6 @@
 import './App.css';
 import { Layout } from 'antd';
-import { Home, AboutCenterPage } from './pages';
+import { Home, AboutCenterPage } from "./pages";
 import { Routes, Route } from 'react-router-dom';
 import { CustomHeader, CustomFooter } from './components';
 
