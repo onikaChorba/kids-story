@@ -2,6 +2,7 @@ import './index.css'
 import { useState } from 'react';
 import { icons } from '../../icons';
 import { Link } from 'react-router-dom';
+import { ComingSoonLink } from '../../components';
 import { Layout, Menu, Button, Flex, Dropdown, Drawer } from 'antd';
 import { PhoneFilled, DownOutlined, MenuOutlined } from '@ant-design/icons';
 
@@ -12,22 +13,49 @@ const CustomHeader = () => {
 
   const dropdownItemsAbout = [
     { key: 'center', label: <Link to="/about-center">About the Center</Link> },
-    { key: 'documents', label: <Link to="/documents">Documents</Link> },
-    { key: 'parents', label: <Link to="/for-parents">For Parents</Link> },
-    { key: 'meals', label: <Link to="/meals">Meals</Link> },
-    { key: 'news', label: <Link to="/news">News</Link> },
-    { key: 'tour3d', label: <Link to="/3d-tour">3D Tour</Link> },
-    { key: 'reviews', label: <Link to="/reviews">Reviews</Link> },
+    {
+      key: 'documents', label: <Link to="/documents">Documents</Link>
+    },
+    {
+      key: 'parents', label:
+        <Link to="/parents">For Parents</Link>
+    },
+    {
+      key: 'meals', label: <ComingSoonLink>
+        Meals
+        {/* <Link to="/meals">Meals</Link> */}
+      </ComingSoonLink>
+    },
+    {
+      key: 'news', label:
+        <ComingSoonLink>
+          News
+          {/* <Link to="/news">News</Link> */}
+        </ComingSoonLink>
+    },
+    {
+      key: 'tour3d', label: <ComingSoonLink>
+        3D Tour
+        {/* <Link to="/3d-tour">3D Tour</Link> */}
+      </ComingSoonLink>
+    },
+    {
+      key: 'reviews', label:
+        <Link to="/reviews">Reviews</Link>
+    },
   ];
 
   const dropdownItemsContacts = [
-    { key: 'phone', label: 'Phone' },
-    { key: 'email', label: 'Email' },
+    {
+      key: 'phone', label: <ComingSoonLink>Phone</ComingSoonLink>
+    },
+    { key: 'email', label: <ComingSoonLink>Email</ComingSoonLink> },
   ];
 
   const dropdownItemsSchedule = [
-    { key: 'morning', label: 'Morning' },
-    { key: 'evening', label: 'Evening' },
+    { key: 'morning', label: <ComingSoonLink>Morning</ComingSoonLink> },
+    { key: 'evening', label: <ComingSoonLink>Evening</ComingSoonLink> },
+    { key: 'Additional Services', label: <Link to="schedule/extra-services">Additional Services</Link> }
   ];
 
   const items = [
@@ -46,7 +74,10 @@ const CustomHeader = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsContacts }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type="text">
-            <Link to="/contact">Contacts</Link>
+            <ComingSoonLink>
+              Contacts
+              {/* <Link to="/contact">Contacts</Link> */}
+            </ComingSoonLink>
           </Button>
         </Dropdown>
       ),
@@ -56,15 +87,36 @@ const CustomHeader = () => {
       label: (
         <Dropdown menu={{ items: dropdownItemsSchedule }} placement="bottom">
           <Button icon={<DownOutlined />} iconPlacement="end" type="text">
-            <Link to="/schedule">Schedule</Link>
+            Schedule
           </Button>
         </Dropdown>
       ),
     },
-    { key: "syllabus", label: <Link to="/syllabus">Syllabus</Link> },
-    { key: "photo/video", label: <Link to="/photo-video">Photo and Video</Link> },
-    { key: "teams", label: <Link to="/teams">Teams</Link> },
-    { key: "contacts", label: <Link to="/contacts">Contacts</Link> },
+    {
+      key: "syllabus", label:
+        <ComingSoonLink>
+          Syllabus
+          {/* <Link to="/syllabus">Syllabus</Link> */}
+        </ComingSoonLink>
+    },
+    {
+      key: "photo/video", label:
+        <ComingSoonLink>
+          Photo and Video
+          {/* <Link to="/photo-video">Photo and Video</Link> */}
+        </ComingSoonLink>
+    },
+    {
+      key: "teams", label:
+        <Link to="/our-team">Teams</Link>
+    },
+    {
+      key: "contacts", label:
+        <ComingSoonLink>
+          Contacts
+          {/* <Link to="/contacts">Contacts</Link> */}
+        </ComingSoonLink>
+    },
   ];
 
   return (
@@ -115,4 +167,4 @@ const CustomHeader = () => {
   );
 };
 
-export { CustomHeader }
+export default CustomHeader 
