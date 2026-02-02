@@ -65,7 +65,7 @@ const CustomFooter = () => {
         </Col>
 
         {Object.entries(footerLinks).map(([key, links]) => (
-          <Col key={key} xs={12} sm={8} md={4} lg={4}>
+          <Col key={key} xs={12} sm={8} md={4} lg={3}>
             <Title level={5} className="footer-title">
               {key.charAt(0).toUpperCase() + key.slice(1)}
             </Title>

@@ -70,6 +70,7 @@ const AboutCenterPage = () => {
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
         background={icons.questionBg3}
+        backgroundColor="#F3ACC8"
       />
       <CustomMap />
     </Flex>

@@ -1,6 +1,7 @@
-import './index.css'
-import Form from 'antd/es/form/Form'
-import { Flex, Input, Button, Radio } from 'antd';
+import './index.css';
+import { Flex, Input, Button, Radio, Form, Typography } from 'antd';
+
+const { Title, Paragraph } = Typography;
 
 interface QuestionProps {
   title: string;
@@ -12,58 +13,67 @@ interface QuestionProps {
   buttonText?: string;
   placeholder?: string;
   background?: string;
+  backgroundColor?: string;
 }
+
 const Question = ({
   title,
   description,
   textColor = "#fff",
   inputBg = "#fff",
-  buttonBg = "#ea5d4a",
+  buttonBg = "#F6B31F",
   radioLabel = "I accept the terms user agreement",
   buttonText = "Send",
   background,
-  placeholder = "+ 3 _  _  _  -  _  _  _  -  _  _  -  _  _",
+  placeholder = "+ 380 _ _  _ _ _  _ _  _ _",
+  backgroundColor,
 }: QuestionProps) => {
   return (
     <section
-      className="question"
+      className="question-section"
       style={{
-        background: background
-          ? `url(${background}) no-repeat center/cover`
-          : `url("../../assets/img/question.png") no-repeat center/cover`,
+        backgroundColor: backgroundColor
       }}
     >
-      <Form className='form' style={{
-        color: textColor
-      }}>
-        <Flex vertical>
-          <h2 style={{
-            color: textColor
-          }}>{title}</h2>
-          <p>{description}</p>
-          <Flex gap="small">
+      <Form className="question-form">
+        <Flex vertical gap={20}>
+          <Title level={2} style={{ color: textColor, margin: 0 }} className="form-title">
+            {title}
+          </Title>
+
+          <Paragraph style={{ color: textColor, margin: 0 }} className="form-description">
+            {description}
+          </Paragraph>
+
+          <Flex gap="small" wrap="wrap" className="input-group">
             <Input
               type="tel"
               placeholder={placeholder}
               size="large"
-              className='input'
+              className="form-input"
               style={{ background: inputBg }}
             />
             <Button
               type="primary"
-              className="button"
-              style={{ background: buttonBg, borderColor: buttonBg }}
+              size="large"
+              className="form-button"
+              style={{ backgroundColor: buttonBg, borderColor: buttonBg }}
             >
               {buttonText}
             </Button>
           </Flex>
-          <Radio className='radio' style={{
-            color: textColor
-          }}>{radioLabel}</Radio>
+
+          <Radio className="form-radio" style={{ color: textColor }}>
+            {radioLabel}
+          </Radio>
         </Flex>
       </Form>
-    </section>
-  )
-}
 
-export { Question }
+      <div className='question-img'>
+        <img src={background} />
+      </div>
+    </section>
+  );
+};
+
+export { Question };

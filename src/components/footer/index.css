@@ -4,7 +4,6 @@
   color: #334155;
 }
 
-/* BRAND */
 .footer-brand {
   max-width: 280px;
 }
@@ -13,7 +12,6 @@
   max-width: 150px;
 }
 
-/* PHONE */
 .footer-phone {
   padding: 0;
   color: #334155;
@@ -23,20 +21,17 @@
   color: #f97316;
 }
 
-/* TEXT */
 .footer-description {
   font-size: 13px;
   line-height: 1.5;
 }
 
-/* TITLES */
 .footer-title {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-/* LINKS */
 .footer-link {
   font-size: 12px;
   color: #334155;
@@ -47,13 +42,11 @@
   color: #f97316;
 }
 
-/* SOCIAL */
 .footer-social img {
   width: 22px;
   height: 22px;
 }
 
-/* BOTTOM */
 .footer-bottom {
   margin-top: 40px;
   padding-top: 20px;
@@ -62,7 +55,6 @@
   font-size: 12px;
 }
 
-/* ===== TABLET ===== */
 @media (max-width: 1024px) {
   .footer {
     padding: 40px 20px;
@@ -73,7 +65,6 @@
   }
 }
 
-/* ===== MOBILE ===== */
 @media (max-width: 600px) {
   .footer {
     padding: 24px 16px;

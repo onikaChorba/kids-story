@@ -22,6 +22,7 @@ const Home = () => {
         inputBg="#f0f0f0"
         buttonText="Send Request"
         radioLabel="I agree with privacy policy"
+        backgroundColor="#8081BD"
       />
       <AdditionalServices />
       <VideoGallery />
@@ -34,6 +35,7 @@ const Home = () => {
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
         background={icons.questionBg2}
+        backgroundColor="#FFF6D1"
       />
       <AboutCenter
         title="About our center"
