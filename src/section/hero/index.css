@@ -21,6 +21,11 @@
   margin: 0px;
 }
 
+.hero{
+  position: relative;
+  margin-top: 100px;
+}
+
 .hero .form {
   max-width: 384px;
   background: #8081bd;
@@ -68,6 +73,11 @@
   right: 15px;
   top: 55%;
   transform: translateY(-50%);
+}
+
+.hero .form{
+  position: absolute;
+  right: 0px;
 }
 
 .hero .form .radio {
