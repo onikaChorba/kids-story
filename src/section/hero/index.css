@@ -26,6 +26,11 @@
   margin-top: 100px;
 }
 
+.hero-img{
+  width: 100%;
+  height: 514px;
+}
+
 .hero .form {
   max-width: 384px;
   background: #8081bd;

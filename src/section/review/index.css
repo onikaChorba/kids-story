@@ -27,13 +27,24 @@
   background: white;
 }
 
-.review-avatar,
+.review-avatar {
+  width: 60px;
+  height: 60px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
 .review-avatar-icon {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 12px;
+  background: #8081bd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .review-avatar-icon {
@@ -119,13 +130,16 @@
     gap: 12px;
   }
 
-  .review-avatar,
-  .review-avatar-icon {
-    width: 36px;
-    height: 36px;
-    margin-bottom: 0;
-    flex-shrink: 0;
-  }
+.reviews .slider .slick-slide img.review-avatar {
+  height: 40px !important;
+  width: 40px !important;
+  min-width: 40px;
+}
+
+.review-avatar-icon {
+  width: 40px;
+  height: 40px;
+}
 
   .review-text {
     font-size: 14px;
