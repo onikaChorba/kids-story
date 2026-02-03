@@ -97,6 +97,7 @@ const ParentsFAQ = () => {
         description="Leave your phone number and we'll call you back
 with all the details about the branch"
         background={icons.questionBg2}
+        backgroundColor="#8081BD"
       />
       <CustomMap />
     </Flex>

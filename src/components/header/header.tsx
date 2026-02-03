@@ -23,10 +23,8 @@ const CustomHeader = () => {
         <Link to="/parents">For Parents</Link>
     },
     {
-      key: 'meals', label: <ComingSoonLink>
-        Meals
-        {/* <Link to="/meals">Meals</Link> */}
-      </ComingSoonLink>
+      key: 'meals', label:
+        <Link to="/meals">Meals</Link>
     },
     {
       key: 'news', label:
