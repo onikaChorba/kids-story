@@ -1,10 +1,28 @@
-import { CustomMap } from "../components";
 import { icons } from "../icons";
+import { Flex, Breadcrumb } from "antd";
+import { Link } from "react-router-dom";
+import { CustomMap } from "../components";
+import { HomeOutlined } from "@ant-design/icons";
 import { About, OurTeam, Question } from "../section"
 
 const OurTeamPage = () => {
   return (
-    <div>
+    <Flex vertical gap={20} style={{ padding: '20px 40px' }}>
+      <Breadcrumb
+        items={[
+          {
+            title: (
+              <Link to="/">
+                <HomeOutlined />
+              </Link>
+            ),
+          },
+          {
+            title: "Additional services",
+          },
+        ]}
+      />
+      <h2>Our Team</h2>
       <OurTeam />
       <About />
       <Question
@@ -14,9 +32,10 @@ const OurTeamPage = () => {
         inputBg="#f0f0f0"
         buttonText="Send Request"
         radioLabel="I agree with privacy policy"
+        backgroundColor="#8081BD"
       />
       <CustomMap />
-    </div>
+    </Flex>
   )
 }
 

@@ -1,6 +1,5 @@
 .our-team {
   position: relative;
-  padding: 60px 20px;
 }
 
 .slider .slick-slide {
@@ -28,6 +27,67 @@
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.team-modal {
+  padding: 10px;
+  color: #334155;
+}
+
+.modal-header {
+  margin-bottom: 10px;
+}
+
+.avatar-border {
+  padding: 4px;
+  border: 3px solid #f6b31f;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.modal-tag-role {
+  font-size: 14px !important;
+  padding: 4px 15px !important;
+  border-radius: 20px !important;
+  background: #f2f2ff !important;
+  border-color: #8081bd !important;
+  color: #8081bd !important;
+}
+
+.modal-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  background: #fdfdfd;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.info-item b {
+  color: #8081bd;
+}
+
+.team-modal h5 {
+  color: #8081bd !important;
+  font-size: 16px !important;
+  margin-bottom: 8px !important;
+  border-left: 4px solid #f6b31f;
+  padding-left: 10px;
+}
+
+.modal-description {
+  font-style: italic;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.modal-name {
+  color: #8081bd !important;
+  text-transform: uppercase;
+  margin-bottom: 5px !important;
+  letter-spacing: 1px;
 }
 
 .team-name {
@@ -69,6 +129,31 @@
 
 .team-modal-wrapper .ant-modal-content {
   border-radius: 16px;
+}
+
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.achievements-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #f6b31f;
+}
+
+.modal-email {
+  font-size: 14px;
+  background: #f8fafc;
+  padding: 5px 15px;
+  border-radius: 50px;
 }
 
 @media (max-width: 1024px) {
@@ -117,5 +202,13 @@
     top: 150px;
     right: 50px;
     width: 60px;
+  }
+
+  .team-modal {
+    padding: 0;
+  }
+  
+  .modal-name {
+    font-size: 20px !important;
   }
 }
