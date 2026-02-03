@@ -11,8 +11,8 @@ interface QuestionProps {
   textColor?: string;
   radioLabel?: string;
   buttonText?: string;
-  placeholder?: string;
   background?: string;
+  placeholder?: string;
   backgroundColor?: string;
 }
 
@@ -41,6 +41,7 @@ const Question = ({
     message.success('Thank you! We will call you back.')
     form.resetFields();
   }
+
   return (
     <section
       className="question-section"

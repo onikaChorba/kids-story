@@ -28,10 +28,7 @@ const CustomHeader = () => {
     },
     {
       key: 'news', label:
-        <ComingSoonLink>
-          News
-          {/* <Link to="/news">News</Link> */}
-        </ComingSoonLink>
+        <Link to="/news">News</Link>
     },
     {
       key: 'tour3d', label: <ComingSoonLink>

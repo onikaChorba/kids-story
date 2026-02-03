@@ -2,7 +2,7 @@ import './App.css';
 import { Layout } from 'antd';
 import { Routes, Route } from 'react-router-dom';
 import { CustomHeader, CustomFooter } from './components';
-import { Home, AboutCenterPage, ExtraServices, OurTeamPage, Reviews, DocumentsAndCertificates, ParentsFAQ, Meals } from "./pages";
+import { Home, NewsPage, AboutCenterPage, ExtraServices, OurTeamPage, Reviews, DocumentsAndCertificates, ParentsFAQ, Meals } from "./pages";
 
 const { Content } = Layout;
 
@@ -25,6 +25,7 @@ function App() {
           <Route path='/documents' element={<DocumentsAndCertificates />} />
           <Route path='/parents' element={<ParentsFAQ />} />
           <Route path='/meals' element={<Meals />} />
+          <Route path='/news' element={<NewsPage />} />
         </Routes>
       </Content>
       <CustomFooter />

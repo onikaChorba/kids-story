@@ -4,6 +4,12 @@ import img1 from "../assets/img/img1.png";
 import img2 from "../assets/img/img2.png";
 import img3 from "../assets/img/img3.png";
 import logo from "../assets/img/logo.png";
+import news from "../assets/img/news.png";
+import news1 from "../assets/img/news1.png";
+import news2 from "../assets/img/news2.png";
+import news3 from "../assets/img/news3.png";
+import news4 from "../assets/img/news4.png";
+import news5 from "../assets/img/news5.png";
 import dish1 from "../assets/img/dish1.png";
 import dish2 from "../assets/img/dish2.png";
 import dish3 from "../assets/img/dish3.png";
@@ -27,7 +33,6 @@ import greenElement from "../assets/icons/green-element.svg";
 import trianglePink from "../assets/icons/triangle-pink.svg";
 import yellowElement from "../assets/icons/yellow-element.svg";
 
-
 export const icons = {
   vk,
   doc,
@@ -35,6 +40,12 @@ export const icons = {
   img2,
   img3,
   logo,
+  news,
+  news1,
+  news2,
+  news3,
+  news4,
+  news5,
   dish1,
   dish2,
   dish3,
