@@ -1,0 +1,55 @@
+.syllabus-section {
+  padding: 80px 5%;
+  background: #fff;
+}
+
+.syllabus-main-title {
+  color: #8E83BC !important;
+  font-size: 48px !important;
+  margin-bottom: 60px !important;
+}
+
+.syllabus-row {
+  margin-bottom: 80px;
+}
+
+/* Шаховий порядок для великих екранів */
+@media (min-width: 992px) {
+  .row-reverse {
+    flex-direction: row-reverse !important;
+  }
+}
+
+.group-image {
+  width: 100%;
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.group-age-title {
+  color: #8E83BC !important;
+  font-size: 32px !important;
+  margin-bottom: 20px !important;
+}
+
+.group-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #64748b;
+  max-width: 500px;
+}
+
+.btn-more {
+  padding: 0 !important;
+  color: #F6B31F !important;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}

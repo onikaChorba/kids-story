@@ -90,11 +90,7 @@ const CustomHeader = () => {
       ),
     },
     {
-      key: "syllabus", label:
-        <ComingSoonLink>
-          Syllabus
-          {/* <Link to="/syllabus">Syllabus</Link> */}
-        </ComingSoonLink>
+      key: "syllabus", label: <Link to="/syllabus">Syllabus</Link>
     },
     {
       key: "photo/video", label:
