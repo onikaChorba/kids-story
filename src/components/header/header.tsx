@@ -2,6 +2,7 @@ import './index.css'
 import { useState } from 'react';
 import { icons } from '../../icons';
 import { Link } from 'react-router-dom';
+import { SignupTourModal } from '../../section';
 import { ComingSoonLink } from '../../components';
 import { Layout, Menu, Button, Flex, Dropdown, Drawer } from 'antd';
 import { PhoneFilled, DownOutlined, MenuOutlined } from '@ant-design/icons';
@@ -10,6 +11,7 @@ const { Header } = Layout;
 
 const CustomHeader = () => {
   const [open, setOpen] = useState(false);
+  const [isSingupModalOpen, setIsSingupModalOpen] = useState(false);
 
   const dropdownItemsAbout = [
     { key: 'center', label: <Link to="/about-center">About the Center</Link> },
@@ -145,7 +147,7 @@ const CustomHeader = () => {
           <Button type="text" icon={<img src={icons.telegram} />} />
         </Flex>
 
-        <Button type="primary" className="custom-button">
+        <Button type="primary" className="custom-button" onClick={() => setIsSingupModalOpen(true)}>
           Sign up for a tour
         </Button>
       </Header>
@@ -163,6 +165,10 @@ const CustomHeader = () => {
       >
         <Menu mode="vertical" items={items} />
       </Drawer>
+
+      {
+        isSingupModalOpen && <SignupTourModal isOpen={isSingupModalOpen} closeModal={() => setIsSingupModalOpen(false)} />
+      }
     </>
   );
 };
