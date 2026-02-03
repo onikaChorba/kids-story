@@ -2,12 +2,13 @@ import './index.css'
 import { useState } from 'react';
 import { icons } from '../../icons';
 import "slick-carousel/slick/slick.css";
-import { Card, Avatar, Button } from "antd";
+import { Card, Avatar, Button, Typography, Tag, Divider, Flex } from "antd";
 import "slick-carousel/slick/slick-theme.css";
 import { CustomModal, CustomSlider } from '../../components';
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
 
 const { Meta } = Card;
+const { Title, Text, Paragraph } = Typography;
 
 const OurTeam = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -130,9 +131,6 @@ const OurTeam = () => {
 
   return (
     <section className="our-team">
-      <h2>
-        Out team
-      </h2>
       <CustomSlider slidesToShow={4} className="slider">
         {team.map(member => (
           <Card
@@ -166,36 +164,55 @@ const OurTeam = () => {
       <CustomModal open={isModalOpen} onClose={closeModal}>
         {activeMember && (
           <div className="team-modal">
-            <Avatar
-              size={100}
-              src={`https://i.pravatar.cc/300?img=${activeMember.img}`}
-            />
+            <Flex vertical align="center" className="modal-header">
+              <div className="avatar-border">
+                <Avatar
+                  size={120}
+                  src={`https://i.pravatar.cc/300?img=${activeMember.img}`}
+                  className="modal-avatar"
+                />
+              </div>
+              <Title level={3} className="modal-name">{activeMember.name}</Title>
+              <Tag color="purple" className="modal-tag-role">{activeMember.role}</Tag>
+            </Flex>
 
-            <h3>{activeMember.name}</h3>
-            <p className="role">{activeMember.role}</p>
+            <Divider style={{ margin: '20px 0' }} />
 
-            <p><b>Experience:</b> {activeMember.experience} years</p>
-            <p><b>Education:</b> {activeMember.education}</p>
+            <div className="modal-info-grid">
+              <div className="info-item">
+                <Text strong>Experience:</Text> <Text>{activeMember.experience} years</Text>
+              </div>
+              <div className="info-item">
+                <Text strong>Education:</Text> <Text>{activeMember.education}</Text>
+              </div>
+            </div>
 
-            <p><b>Specialization:</b></p>
-            <ul>
-              {activeMember.specialization.map((item: any) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <div className="modal-details">
+              <Title level={5}>Specialization</Title>
+              <Flex gap="4px" wrap="wrap">
+                {activeMember.specialization.map((item: string) => (
+                  <Tag key={item} color="blue" bordered={false}>{item}</Tag>
+                ))}
+              </Flex>
 
-            <p><b>Languages:</b> {activeMember.languages.join(", ")}</p>
+              <Title level={5} style={{ marginTop: '15px' }}>About Me</Title>
+              <Paragraph className="modal-description">
+                {activeMember.description}
+              </Paragraph>
 
-            <p className="description">{activeMember.description}</p>
+              <Title level={5}>Achievements</Title>
+              <ul className="achievements-list">
+                {activeMember.achievements.map((item: string) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
 
-            <p><b>Achievements:</b></p>
-            <ul>
-              {activeMember.achievements.map((item: any) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <Divider style={{ margin: '15px 0' }} />
 
-            <p className="email">{activeMember.email}</p>
+            <Flex justify="center">
+              <Text type="secondary" className="modal-email">{activeMember.email}</Text>
+            </Flex>
           </div>
         )}
       </CustomModal>

@@ -1,5 +1,5 @@
 import './index.css';
-import { Flex, Input, Button, Radio, Form, Typography } from 'antd';
+import { Flex, Input, Button, Radio, Form, Typography, message } from 'antd';
 
 const { Title, Paragraph } = Typography;
 
@@ -16,6 +16,11 @@ interface QuestionProps {
   backgroundColor?: string;
 }
 
+interface FormValues {
+  phone: string;
+  agreement: boolean;
+}
+
 const Question = ({
   title,
   description,
@@ -28,6 +33,14 @@ const Question = ({
   placeholder = "+ 380 _ _  _ _ _  _ _  _ _",
   backgroundColor,
 }: QuestionProps) => {
+
+  const [form] = Form.useForm();
+
+  const onFinish = (values: FormValues) => {
+    alert(` Question From Sent!\n Phone: ${values.phone}`)
+    message.success('Thank you! We will call you back.')
+    form.resetFields();
+  }
   return (
     <section
       className="question-section"
@@ -35,7 +48,11 @@ const Question = ({
         backgroundColor: backgroundColor
       }}
     >
-      <Form className="question-form">
+      <Form
+        form={form}
+        onFinish={onFinish}
+        initialValues={{ agreement: false }}
+        className="question-form">
         <Flex vertical gap={20}>
           <Title level={2} style={{ color: textColor, margin: 0 }} className="form-title">
             {title}
@@ -46,16 +63,26 @@ const Question = ({
           </Paragraph>
 
           <Flex gap="small" wrap="wrap" className="input-group">
-            <Input
-              type="tel"
-              placeholder={placeholder}
-              size="large"
-              className="form-input"
-              style={{ background: inputBg }}
-            />
+            <Form.Item
+              name="phone"
+              style={{ flex: 1, marginBottom: 0 }}
+              rules={[
+                { required: true, message: 'Please enter your phone!' },
+                { pattern: /^\+?3?8?(0\d{9})$/, message: 'Invalid format' }
+              ]}
+            >
+              <Input
+                type="tel"
+                placeholder={placeholder}
+                size="large"
+                className="form-input"
+                style={{ background: inputBg }}
+              />
+            </Form.Item>
             <Button
               type="primary"
               size="large"
+              htmlType="submit"
               className="form-button"
               style={{ backgroundColor: buttonBg, borderColor: buttonBg }}
             >
@@ -63,9 +90,21 @@ const Question = ({
             </Button>
           </Flex>
 
-          <Radio className="form-radio" style={{ color: textColor }}>
-            {radioLabel}
-          </Radio>
+          <Form.Item
+            name="agreement"
+            valuePropName="checked"
+            rules={[
+              {
+                validator: (_, value) =>
+                  value ? Promise.resolve() : Promise.reject(new Error('Accept the agreement')),
+              },
+            ]}
+            style={{ marginBottom: 0 }}
+          >
+            <Radio className="form-radio" style={{ color: textColor }}>
+              {radioLabel}
+            </Radio>
+          </Form.Item>
         </Flex>
       </Form>
 

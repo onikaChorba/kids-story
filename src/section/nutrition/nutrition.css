@@ -1,0 +1,78 @@
+.nutrition-section {
+  padding: 60px 5%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.nutrition-main-title {
+  color: #8E83BC !important;
+  font-size: 48px !important;
+  margin-bottom: 40px !important;
+}
+
+.menu-category-block {
+  margin-bottom: 30px;
+}
+
+.category-title {
+  color: #95C11F !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+}
+
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+
+.item-name {
+  color: #8E83BC;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.item-dots {
+  flex: 1;
+  border-bottom: 1px dotted #F6B31F;
+  margin: 0 10px;
+  position: relative;
+  top: -4px;
+}
+
+.item-weight {
+  color: #334155;
+  font-size: 14px;
+}
+
+.main-food-image {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.food-thumbnail {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nutrition-main-title {
+    font-size: 32px !important;
+    text-align: center;
+  }
+}

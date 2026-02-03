@@ -1,11 +1,10 @@
-import { icons } from "../icons";
+import { icons } from '../icons';
 import { Flex, Breadcrumb } from "antd";
-import { Link } from "react-router-dom";
-import { CustomMap } from "../components";
+import { Link } from 'react-router-dom';
 import { HomeOutlined } from "@ant-design/icons";
-import { About, OurTeam, Question } from "../section"
+import { Nutrition, Question } from '../section';
 
-const OurTeamPage = () => {
+const Meals = () => {
   return (
     <Flex vertical gap={20} style={{ padding: '20px 40px' }}>
       <Breadcrumb
@@ -22,9 +21,9 @@ const OurTeamPage = () => {
           },
         ]}
       />
-      <h2>Our Team</h2>
-      <OurTeam />
-      <About />
+
+      <h2>Nutrition</h2>
+      <Nutrition />
       <Question
         title="Have questions? Get a free consultation."
         description="Leave your phone number and we'll call you back with all the details about the branch"
@@ -34,9 +33,8 @@ const OurTeamPage = () => {
         radioLabel="I agree with privacy policy"
         backgroundColor="#8081BD"
       />
-      <CustomMap />
     </Flex>
-  )
-}
+  );
+};
 
-export default OurTeamPage;
+export default Meals;

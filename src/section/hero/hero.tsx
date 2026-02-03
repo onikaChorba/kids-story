@@ -32,7 +32,7 @@ const Hero = () => {
         <h2>English for children garden and club</h2>
       </Flex>
 
-      <img src={icons.heroImg} width="100%" alt="Hero" />
+      <img src={icons.heroImg} className='hero-img' alt="Hero" />
 
       <Form
         form={form}
