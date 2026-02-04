@@ -50,7 +50,7 @@ const CustomHeader = () => {
   ];
 
   const dropdownItemsSchedule = [
-    { key: 'morning', label: <ComingSoonLink>Morning</ComingSoonLink> },
+    { key: 'morning', label: <Link to="schedule/main">The schedule is basic</Link> },
     { key: 'evening', label: <ComingSoonLink>Evening</ComingSoonLink> },
     { key: 'Additional Services', label: <Link to="schedule/extra-services">Additional Services</Link> }
   ];

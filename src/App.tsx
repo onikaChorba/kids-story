@@ -2,7 +2,7 @@ import './App.css';
 import { Layout } from 'antd';
 import { Routes, Route } from 'react-router-dom';
 import { CustomHeader, CustomFooter } from './components';
-import { Home, NewsPage, AboutCenterPage, ExtraServices, OurTeamPage, Reviews, DocumentsAndCertificates, ParentsFAQ, Meals, SyllabusPage } from "./pages";
+import { Home, NewsPage, AboutCenterPage, ExtraServices, OurTeamPage, Reviews, DocumentsAndCertificates, ParentsFAQ, Meals, SyllabusPage, ScheduleMainPage } from "./pages";
 
 const { Content } = Layout;
 
@@ -27,6 +27,7 @@ function App() {
           <Route path='/meals' element={<Meals />} />
           <Route path='/news' element={<NewsPage />} />
           <Route path='/syllabus' element={<SyllabusPage />} />
+          <Route path='/schedule/main' element={<ScheduleMainPage />} />
         </Routes>
       </Content>
       <CustomFooter />
