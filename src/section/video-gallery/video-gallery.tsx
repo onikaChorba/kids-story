@@ -71,10 +71,15 @@ const VideoGallery = () => {
       </Slider>
 
       <h2 className="title">Advantages</h2>
-      <Row justify="center" gutter={[0, 20]}>
+      <Row gutter={[16, 24]} justify="start">
         {advantagesData.map((item, index) => (
-          <Col span={8} key={index}>
-            <Flex align="center" gap={20}>
+          <Col
+            xs={24}
+            sm={12}
+            md={8}
+            key={index}
+          >
+            <Flex align="center" gap={16} className="advantage-item">
               <div className={`icon-wrapper ${item.color}`}>
                 <item.icon style={{ fontSize: 26, color: "white" }} />
               </div>
