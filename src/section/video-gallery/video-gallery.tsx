@@ -1,4 +1,4 @@
-import './index.css'
+import './video-galery.css'
 import Slider from "react-slick";
 import { icons } from "../../icons";
 import { Image, Row, Col, Flex } from "antd";
@@ -32,6 +32,21 @@ const VideoGallery = () => {
     slidesToShow: 3,
     centerPadding: "0px",
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        }
+      }
+    ]
   };
 
   return (
