@@ -151,7 +151,6 @@ const CustomHeader = () => {
         styles={{
           body: { padding: 0 },
         }}
-        getContainer={false}
         style={{ position: 'fixed' }}
       >
         <Menu mode="vertical" items={items} />
