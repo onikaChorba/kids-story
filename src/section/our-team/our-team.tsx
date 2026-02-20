@@ -1,4 +1,4 @@
-import './index.css'
+import './our-team.css'
 import { useState } from 'react';
 import { icons } from '../../icons';
 import "slick-carousel/slick/slick.css";

@@ -1,4 +1,4 @@
-import './index.css';
+import './hero.css';
 import { icons } from '../../icons';
 import { Button, Flex, Form, Input, Radio, Typography, message } from 'antd';
 
