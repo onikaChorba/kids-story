@@ -1,4 +1,4 @@
-import './index.css';
+import './question.css';
 import { Flex, Input, Button, Radio, Form, Typography, message } from 'antd';
 
 const { Title, Paragraph } = Typography;

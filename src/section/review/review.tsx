@@ -1,4 +1,4 @@
-import "./index.css";
+import "./review.css";
 import { Flex, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { CustomSlider } from "../../components";
